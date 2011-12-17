@@ -46,7 +46,7 @@ namespace ZeeGraph
 		/// </summary>
 		protected Bar			_bar;
 	#endregion
-	
+
 	#region Properties
 		/// <summary>
 		/// Gets a reference to the <see cref="ZeeGraph.Bar"/> class defined
@@ -78,9 +78,9 @@ namespace ZeeGraph
 		{
 			return pane._barSettings.Base == BarBase.X || pane._barSettings.Base == BarBase.X2;
 		}
-		
+
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Create a new <see cref="BarItem"/>, specifying only the legend label for the bar.
@@ -120,7 +120,7 @@ namespace ZeeGraph
 		{
 			_bar = new Bar( color );
 		}
-		
+
 		/// <summary>
 		/// The Copy Constructor
 		/// </summary>
@@ -218,7 +218,7 @@ namespace ZeeGraph
 				_bar.DrawBars( g, pane, this, BaseAxis( pane ), ValueAxis( pane ),
 								this.GetBarWidth( pane ), pos, scaleFactor );
 		}
-		
+
 		/// <summary>
 		/// Draw a legend key entry for this <see cref="BarItem"/> at the specified location
 		/// </summary>
@@ -384,7 +384,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine the coords for the rectangle associated with a specified point for 
+		/// Determine the coords for the rectangle associated with a specified point for
 		/// this <see cref="CurveItem" />
 		/// </summary>
 		/// <param name="pane">The <see cref="GraphPane" /> to which this curve belongs</param>

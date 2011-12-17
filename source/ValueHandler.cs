@@ -26,7 +26,7 @@ namespace ZeeGraph
 	/// A class designed to simplify the process of getting the actual value for
 	/// the various stacked and regular curve types
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion</author>
 	/// <version> $Revision: 3.20 $ $Date: 2007/11/03 04:41:29 $ </version>
 	public class ValueHandler
@@ -288,7 +288,7 @@ namespace ZeeGraph
 								PointPair.Missing : stack + curVal;
 					}
 				}
-				
+
 				if ( baseVal == PointPair.Missing || lowVal == PointPair.Missing ||
 					hiVal == PointPair.Missing )
 					return false;

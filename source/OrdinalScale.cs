@@ -36,7 +36,7 @@ namespace ZeeGraph
 	/// for points corresponding to that axis are ignored.  That is, if the X axis is an
 	/// ordinal type, then all X values associated with the curves are ignored.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.8 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]

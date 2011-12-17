@@ -27,14 +27,14 @@ namespace ZeeGraph
 	/// </summary>
 	/// <remarks>
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion and JCarpenter </author>
 	/// <version> $Revision: 3.5 $ $Date: 2007/03/11 02:08:16 $ </version>
 	public class Selection : CurveList
 	{
 		// Revision: JCarpenter 10/06
 		/// <summary>
-		/// Subscribe to this event to receive notice 
+		/// Subscribe to this event to receive notice
 		/// that the list of selected CurveItems has changed
 		/// </summary>
 		public event EventHandler SelectionChangedEvent;
@@ -226,12 +226,12 @@ namespace ZeeGraph
 				//If it is a line / scatterplot, the selected Curve may be occluded by an unselected Curve
 				//So, move it to the top of the ZOrder by removing it, and re-adding it.
 
-				//Why only do this for Lines? ...Bar and Pie Curves are less likely to overlap, 
+				//Why only do this for Lines? ...Bar and Pie Curves are less likely to overlap,
 				//and adding and removing Pie elements changes thier display order
 				if ( ci.IsLine )
 				{
-					//I don't know how to get a Pane, from a CurveItem, so I can only do it 
-					//if there is one and only one Pane, based on the assumption that the 
+					//I don't know how to get a Pane, from a CurveItem, so I can only do it
+					//if there is one and only one Pane, based on the assumption that the
 					//Curve's Pane is MasterPane[0]
 
 					//If there is only one Pane

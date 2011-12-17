@@ -30,7 +30,7 @@ namespace ZeeGraph
 	/// The symbols are the small shapes that appear over each defined point
 	/// along the curve.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.37 $ $Date: 2007/09/19 06:41:56 $ </version>
 	[Serializable]
@@ -189,7 +189,7 @@ namespace ZeeGraph
 			get { return _isVisible; }
 			set { _isVisible = value; }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets the <see cref="ZeeGraph.Fill"/> data for this
 		/// <see cref="Symbol"/>.
@@ -223,7 +223,7 @@ namespace ZeeGraph
 		}
 
 		#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Default constructor that sets all <see cref="Symbol"/> properties to default
@@ -463,9 +463,9 @@ namespace ZeeGraph
 			float	scaledSize = (float) ( _size * scaleFactor );
 			float	hsize = scaledSize / 2,
 					hsize1 = hsize + 1;
-			
+
 			GraphicsPath path = new GraphicsPath();
-			
+
 			switch( _type == SymbolType.Default || ( _type == SymbolType.UserDefined && _userSymbol == null ) ? Default.Type : _type )
 			{
 			case SymbolType.Square:
@@ -524,7 +524,7 @@ namespace ZeeGraph
 				path.Transform( scaleTransform );
 				break;
 			}
-			
+
 			return path;
 		}
 
@@ -569,7 +569,7 @@ namespace ZeeGraph
 			int minY = (int)pane.Chart.Rect.Top;
 			int maxY = (int)pane.Chart.Rect.Bottom;
 
-			// (Dale-a-b) we'll set an element to true when it has been drawn	
+			// (Dale-a-b) we'll set an element to true when it has been drawn
 			bool[,] isPixelDrawn = new bool[maxX + 1, maxY + 1];
 
 			double curX, curY, lowVal;
@@ -603,7 +603,7 @@ namespace ZeeGraph
 						double xMin = xScale.Min;
 						double xMax = xScale.Max;
 
-						// Loop over each defined point							
+						// Loop over each defined point
 						for ( int i = 0; i < points.Count; i++ )
 						{
 							// Get the user scale values for the current point
@@ -674,7 +674,7 @@ namespace ZeeGraph
 			}
 		}
 		#endregion
-	
+
 	}
 }
 

@@ -34,14 +34,14 @@ namespace ZeeGraph
 	/// <summary>
 	/// A simple point represented by an (X,Y,Z) group of double values.
 	/// </summary>
-	/// 
+	///
 	/// <author> Jerry Vos modified by John Champion </author>
 	/// <version> $Revision: 3.26 $ $Date: 2007/11/28 02:38:22 $ </version>
 	[Serializable]
 	public class PointPair : PointPairBase, ISerializable, ICloneable
 	{
 	#region Member variables
-		
+
 		/// <summary>
 		/// This PointPair's Z coordinate.  Also used for the lower value (dependent axis)
 		/// for <see cref="HiLowBarItem"/> and <see cref="ErrorBarItem" /> charts.
@@ -278,41 +278,41 @@ namespace ZeeGraph
 		/// </summary>
 		public class PointPairComparerY : IComparer
 		{
-		
+
 			/// <summary>
 			/// Compares two <see cref="PointPair"/>s.
 			/// </summary>
 			/// <param name="l">Point to the left.</param>
 			/// <param name="r">Point to the right.</param>
 			/// <returns>-1, 0, or 1 depending on l.Y's relation to r.Y</returns>
-			public int Compare( object l, object r ) 
+			public int Compare( object l, object r )
 			{
 				PointPair pl = (PointPair) l;
 				PointPair pr = (PointPair) r;
 
-				if (pl == null && pr == null) 
+				if (pl == null && pr == null)
 				{
 					return 0;
-				} 
-				else if (pl == null && pr != null) 
+				}
+				else if (pl == null && pr != null)
 				{
 					return -1;
-				} 
-				else if (pl != null && pr == null) 
+				}
+				else if (pl != null && pr == null)
 				{
 					return 1;
-				} 
+				}
 
 				double lY = pl.Y;
 				double rY = pr.Y;
 
 				if (System.Math.Abs(lY - rY) < .000000001)
 					return 0;
-				
+
 				return lY < rY ? -1 : 1;
 			}
 		}
-	
+
 		/// <summary>
 		/// Compares points based on their x values.  Is setup to be used in an
 		/// ascending order sort.
@@ -321,7 +321,7 @@ namespace ZeeGraph
 		public class PointPairComparer : IComparer
 		{
 			private SortType sortType;
-			
+
 			/// <summary>
 			/// Constructor for PointPairComparer.
 			/// </summary>
@@ -330,27 +330,27 @@ namespace ZeeGraph
 			{
 				this.sortType = type;
 			}
-			
+
 			/// <summary>
 			/// Compares two <see cref="PointPair"/>s.
 			/// </summary>
 			/// <param name="l">Point to the left.</param>
 			/// <param name="r">Point to the right.</param>
 			/// <returns>-1, 0, or 1 depending on l.X's relation to r.X</returns>
-			public int Compare( object l, object r ) 
-			{				 
+			public int Compare( object l, object r )
+			{
 				PointPair pl = (PointPair) l;
 				PointPair pr = (PointPair) r;
 
-				if ( pl == null && pr == null ) 
+				if ( pl == null && pr == null )
 					return 0;
-				else if ( pl == null && pr != null ) 
+				else if ( pl == null && pr != null )
 					return -1;
-				else if ( pl != null && pr == null ) 
+				else if ( pl != null && pr == null )
 					return 1;
 
 				double lVal, rVal;
-			
+
 				if ( sortType == SortType.XValues )
 				{
 					lVal = pl.X;
@@ -361,7 +361,7 @@ namespace ZeeGraph
 					lVal = pl.Y;
 					rVal = pr.Y;
 				}
-				
+
 				if ( lVal == PointPair.Missing || Double.IsInfinity( lVal ) || Double.IsNaN( lVal ) )
 					pl = null;
 				if ( rVal == PointPair.Missing || Double.IsInfinity( rVal ) || Double.IsNaN( rVal ) )
@@ -369,15 +369,15 @@ namespace ZeeGraph
 
 				if ( ( pl == null && pr == null ) || ( System.Math.Abs( lVal - rVal ) < 1e-10 ) )
 					return 0;
-				else if ( pl == null && pr != null ) 
+				else if ( pl == null && pr != null )
 					return -1;
-				else if ( pl != null && pr == null ) 
+				else if ( pl != null && pr == null )
 					return 1;
 				else
 					return lVal < rVal ? -1 : 1;
 			}
 		}
-	
+
 	#else		// Otherwise, it's .Net 2.0, so use generics
 
 		/// <summary>
@@ -532,7 +532,7 @@ namespace ZeeGraph
 		virtual public string ToString( string format, bool isShowZ )
 		{
 			return "( " + this.X.ToString( format ) +
-					", " + this.Y.ToString( format ) + 
+					", " + this.Y.ToString( format ) +
 					( isShowZ ? ( ", " + this.Z.ToString( format ) ) : "" )
 					+ " )";
 		}
@@ -551,8 +551,8 @@ namespace ZeeGraph
 		public string ToString( string formatX, string formatY, string formatZ )
 		{
 			return "( " + this.X.ToString( formatX ) +
-					", " + this.Y.ToString( formatY ) + 
-					", " + this.Z.ToString( formatZ ) + 
+					", " + this.Y.ToString( formatY ) +
+					", " + this.Z.ToString( formatZ ) +
 					" )";
 		}
 

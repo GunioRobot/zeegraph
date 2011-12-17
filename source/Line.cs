@@ -29,7 +29,7 @@ namespace ZeeGraph
 	/// A class representing all the characteristics of the Line
 	/// segments that make up a curve on the graph.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.48 $ $Date: 2007/11/28 02:38:22 $ </version>
 	[Serializable]
@@ -677,12 +677,12 @@ namespace ZeeGraph
 
 					bool isOptDraw = _isOptimizedDraw && points.Count > 1000;
 
-					// (Dale-a-b) we'll set an element to true when it has been drawn	
+					// (Dale-a-b) we'll set an element to true when it has been drawn
 					bool[,] isPixelDrawn = null;
-					
+
 					if ( isOptDraw )
-						isPixelDrawn = new bool[maxX + 1, maxY + 1]; 
-					
+						isPixelDrawn = new bool[maxX + 1, maxY + 1];
+
 					// Loop over each point in the curve
 					for ( int i = 0; i < points.Count; i++ )
 					{

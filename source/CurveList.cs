@@ -27,7 +27,7 @@ namespace ZeeGraph
 	/// A collection class containing a list of <see cref="CurveItem"/> objects
 	/// that define the set of curves to be displayed on the graph.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion
 	/// modified by Jerry Vos</author>
 	/// <version> $Revision: 3.43 $ $Date: 2007/11/03 04:41:28 $ </version>
@@ -150,9 +150,9 @@ namespace ZeeGraph
 			return false;
 		}
 	#endregion
-	
+
 	#region Constructors
-	
+
 		/// <summary>
 		/// Default constructor for the collection class
 		/// </summary>
@@ -194,7 +194,7 @@ namespace ZeeGraph
 			return new CurveList( this );
 		}
 
-		
+
 	#endregion
 
 	#region IEnumerable Methods
@@ -234,7 +234,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="CurveItem"/> object to be accessed.</param>
 		/// <value>A <see cref="CurveItem"/> object reference.</value>
-		public CurveItem this[ int index ]  
+		public CurveItem this[ int index ]
 		{
 			get { return( (CurveItem) List[index] ); }
 			set { List[index] = value; }
@@ -247,7 +247,7 @@ namespace ZeeGraph
 		/// <param name="label">The string label of the
 		/// <see cref="CurveItem"/> object to be accessed.</param>
 		/// <value>A <see cref="CurveItem"/> object reference.</value>
-		public CurveItem this[ string label ]  
+		public CurveItem this[ string label ]
 		{
 			get
 			{
@@ -397,9 +397,9 @@ namespace ZeeGraph
 
 		/// <summary>
 		/// Go through each <see cref="CurveItem"/> object in the collection,
-		/// calling the <see cref="CurveItem.GetRange"/> member to 
+		/// calling the <see cref="CurveItem.GetRange"/> member to
 		/// determine the minimum and maximum values in the
-		/// <see cref="CurveItem.Points"/> list of data value pairs.  If the curves include 
+		/// <see cref="CurveItem.Points"/> list of data value pairs.  If the curves include
 		/// a stack bar, handle within the current GetRange method. In the event that no
 		/// data are available, a default range of min=0.0 and max=1.0 are returned.
 		/// If the Y axis has a valid data range and the Y2 axis not, then the Y2
@@ -442,7 +442,7 @@ namespace ZeeGraph
 				InitScale( axis.Scale, isBoundedRanges );
 
 			maxPts = 1;
-			
+
 			// Loop over each curve in the collection and examine the data ranges
 			foreach ( CurveItem curve in this )
 			{
@@ -662,7 +662,7 @@ namespace ZeeGraph
 
 			// Count the number of BarItems in the curvelist
 			int pos = this.NumBars;
-			
+
 			// sorted overlay bars are a special case, since they are sorted independently at each
 			// ordinal position.
 			if ( pane._barSettings.Type == BarType.SortedOverlay )
@@ -672,7 +672,7 @@ namespace ZeeGraph
 				foreach ( CurveItem curve in this )
 					if ( curve.IsBar )
 						tempList.Add( (CurveItem) curve );
-				
+
 				// Loop through the bars, graphing each ordinal position separately
 				for ( int i=0; i<this.maxPts; i++ )
 				{
@@ -694,10 +694,10 @@ namespace ZeeGraph
 			for ( int i = this.Count - 1; i >= 0; i-- )
 			{
 				CurveItem curve = this[i];
-				
+
 				if ( curve.IsBar)
 					pos--;
-					
+
 				// Render the curve
 
 				//	if it's a sorted overlay bar type, it's already been done above

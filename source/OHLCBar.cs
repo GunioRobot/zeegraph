@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// This class handles the drawing of the curve <see cref="OHLCBar"/> objects.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.5 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]
@@ -348,7 +348,7 @@ namespace ZeeGraph
 						new Pen( Selection.Border.Color, Selection.Border.Width ) )
 //				using ( Pen pen = new Pen( _color, _penWidth ) )
 				{
-					// Loop over each defined point							
+					// Loop over each defined point
 					for ( int i = 0; i < curve.Points.Count; i++ )
 					{
 						PointPair pt = curve.Points[i];
@@ -429,7 +429,7 @@ namespace ZeeGraph
 			// use integral size
 			return (int)(width + 0.5f);
 		}
-		
+
 	#endregion
 
 	}

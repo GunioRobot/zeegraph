@@ -30,7 +30,7 @@ namespace ZeeGraph
 	/// <see cref="GraphObj"/> objects is maintained by the
 	/// <see cref="GraphObjList"/> collection class.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.4 $ $Date: 2007/01/25 07:56:09 $ </version>
 	[Serializable]
@@ -78,11 +78,11 @@ namespace ZeeGraph
 		{
 			/*
 			/// <summary>
-			/// The default wrapped flag for rendering this <see cref="TextObj,Text"/>. 
+			/// The default wrapped flag for rendering this <see cref="TextObj,Text"/>.
 			/// </summary>
 			public static bool IsWrapped = false ;
 			/// <summary>
-			/// The default RectangleF for rendering this <see cref="TextObj.Text"/> 
+			/// The default RectangleF for rendering this <see cref="TextObj.Text"/>
 			/// </summary>
 			public static SizeF WrappedSize = new SizeF( 0,0 );
 			*/
@@ -125,25 +125,25 @@ namespace ZeeGraph
 	#endregion
 
 	#region Properties
-		
+
 		/*
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		internal bool IsWrapped
 		{
 			get { return (this.isWrapped); }
-			set { this.isWrapped = value; } 
+			set { this.isWrapped = value; }
 		}
 		*/
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		public SizeF LayoutArea
 		{
 			get { return _layoutArea; }
-			set { _layoutArea = value; } 
+			set { _layoutArea = value; }
 		}
 
 
@@ -177,7 +177,7 @@ namespace ZeeGraph
 			}
 		}
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Constructor that sets all <see cref="TextObj"/> properties to default
@@ -206,16 +206,16 @@ namespace ZeeGraph
 				_text = text;
 			else
 				text = "Text";
-			
+
 			_fontSpec = new FontSpec(
 				Default.FontFamily, Default.FontSize,
 				Default.FontColor, Default.FontBold,
 				Default.FontItalic, Default.FontUnderline );
-			
+
 			//this.isWrapped = Default.IsWrapped ;
 			_layoutArea = new SizeF( 0, 0 );
 		}
-		
+
 		/// <summary>
 		/// Constructor that sets all <see cref="TextObj"/> properties to default
 		/// values as defined in the <see cref="Default"/> class.
@@ -275,7 +275,7 @@ namespace ZeeGraph
 		{
 			Init( "" );
 		}
-		
+
 		/// <summary>
 		/// The Copy Constructor
 		/// </summary>
@@ -372,7 +372,7 @@ namespace ZeeGraph
 			// transform the x,y location from the user-defined
 			// coordinate frame to the screen pixel location
 			PointF pix = Location.Transform( pane );
-			
+
 			// Draw the text on the screen, including any frame and background
 			// fill elements
 			if ( pix.X > -100000 && pix.X < 100000 && pix.Y > -100000 && pix.Y < 100000 )
@@ -386,7 +386,7 @@ namespace ZeeGraph
 
 			}
 		}
-		
+
 		/// <summary>
 		/// Determine if the specified screen point lies inside the bounding box of this
 		/// <see cref="TextObj"/>.  This method takes into account rotation and alignment
@@ -416,7 +416,7 @@ namespace ZeeGraph
 			// transform the x,y location from the user-defined
 			// coordinate frame to the screen pixel location
 			PointF pix = Location.Transform( pane );
-			
+
 			return _fontSpec.PointInBox( pt, g, _text, pix.X, pix.Y,
 								Location.AlignH, Location.AlignV, scaleFactor, this.LayoutArea );
 		}
@@ -440,8 +440,8 @@ namespace ZeeGraph
 						pts[2].X, pts[2].Y, pts[3].X, pts[3].Y );
 		}
 
-		
+
 	#endregion
-	
+
 	}
 }

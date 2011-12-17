@@ -30,7 +30,7 @@ namespace ZeeGraph
 	/// A class that encapsulates Border (frame) properties for an object.  The <see cref="Border"/> class
 	/// is used in a variety of ZedGraph objects to handle the drawing of the Border around the object.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.18 $ $Date: 2007/03/17 18:43:44 $ </version>
 	[Serializable]
@@ -62,7 +62,7 @@ namespace ZeeGraph
 			public static float InflateFactor = 0.0F;
 		}
 	#endregion
-		
+
 	#region Constructors
 		/// <summary>
 		/// The default constructor.  Initialized to default values.
@@ -161,7 +161,7 @@ namespace ZeeGraph
 			info.AddValue( "inflateFactor", _inflateFactor );
 		}
 	#endregion
-		
+
 	#region Properties
 		/// <summary>
 		/// Gets or sets the amount of inflation to be done on the rectangle
@@ -198,11 +198,11 @@ namespace ZeeGraph
 			float scaledPenWidth = _width;
 			if ( isPenWidthScaled )
 				scaledPenWidth = (float)(_width * scaleFactor);
-			
+
 			return new Pen( _color, scaledPenWidth );
 		}
 		*/
-		
+
 		/// <summary>
 		/// Draw the specified Border (<see cref="RectangleF"/>) using the properties of
 		/// this <see cref="Border"/> object.

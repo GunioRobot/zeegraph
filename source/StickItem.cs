@@ -38,7 +38,7 @@ namespace ZeeGraph
 	/// symbols will be drawn at the "Z" value from each <see cref="PointPair" /> (see
 	/// <see cref="PointPair.Z" />).
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 1.7 $ $Date: 2007/01/25 07:56:09 $ </version>
 	[Serializable]
@@ -72,7 +72,7 @@ namespace ZeeGraph
 			return true;
 		}
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Create a new <see cref="StickItem"/>, specifying only the legend <see cref="CurveItem.Label" />.
@@ -82,7 +82,7 @@ namespace ZeeGraph
 		{
 			_symbol.IsVisible = false;
 		}
-		
+
 		/// <summary>
 		/// Create a new <see cref="StickItem"/> using the specified properties.
 		/// </summary>

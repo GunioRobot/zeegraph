@@ -39,7 +39,7 @@ namespace ZeeGraph
 	/// the derived classes remain strongly-typed, there are no Add() or
 	/// Insert() methods here, and no methods that return an object.
 	/// Only Remove(), Move(), IndexOf(), etc. methods are included.</remarks>
-	/// 
+	///
 	/// <author> John Champion</author>
 	/// <version> $Revision: 3.8 $ $Date: 2006/06/24 20:26:43 $ </version>
 	[Serializable]
@@ -70,7 +70,7 @@ namespace ZeeGraph
 		/// Remove an object from the collection at the specified ordinal location.
 		/// </summary>
 		/// <param name="index">
-		/// An ordinal position in the list at which the object to be removed 
+		/// An ordinal position in the list at which the object to be removed
 		/// is located.
 		/// </param>
 		/// <seealso cref="IList.Remove"/>
@@ -123,7 +123,7 @@ namespace ZeeGraph
 			return index;
 		}
 
-	/*	
+	/*
 	#region Serialization
 		/// <summary>
 		/// Current schema value that defines the version of the serialized file

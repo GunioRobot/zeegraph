@@ -30,7 +30,7 @@ namespace ZeeGraph
 	/// properties.  Inherits from <see cref="Label" />, and adds the <see cref="Gap" />
 	/// property for use by the <see cref="Axis" /> and <see cref="PaneBase" /> objects.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]

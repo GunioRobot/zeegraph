@@ -31,7 +31,7 @@ namespace ZeeGraph
 	/// <see cref="GraphObj"/> objects is maintained by the
 	/// <see cref="GraphObjList"/> collection class.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]
@@ -50,14 +50,14 @@ namespace ZeeGraph
 		/// access this value.
 		/// </summary>
 		private bool _isVisible;
-		
+
 		/// <summary>
 		/// Protected field that determines whether or not the rendering of this <see cref="GraphObj"/>
 		/// will be clipped to the ChartRect.  Use the public property <see cref="IsClippedToChartRect"/> to
 		/// access this value.
 		/// </summary>
 		private bool _isClippedToChartRect;
-		
+
 		/// <summary>
 		/// A tag object for use by the user.  This can be used to store additional
 		/// information associated with the <see cref="GraphObj"/>.  ZedGraph does
@@ -148,7 +148,7 @@ namespace ZeeGraph
 			get { return _zOrder; }
 			set { _zOrder = value; }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets a value that determines if this <see cref="GraphObj"/> will be
 		/// visible in the graph.  true displays the item, false hides it.
@@ -212,7 +212,7 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	#region Constructors
 		/// <overloads>
 		/// Constructors for the <see cref="GraphObj"/> class.
@@ -290,7 +290,7 @@ namespace ZeeGraph
 			this( x, y, coordType, Default.AlignH, Default.AlignV )
 		{
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a <see cref="GraphObj"/> with the specified
 		/// position, <see cref="CoordType"/>, <see cref="AlignH"/>, and <see cref="AlignV"/>.
@@ -478,7 +478,7 @@ namespace ZeeGraph
 		/// font sizes, etc. according to the actual size of the graph.
 		/// </param>
 		abstract public void Draw( Graphics g, PaneBase pane, float scaleFactor );
-		
+
 		/// <summary>
 		/// Determine if the specified screen point lies inside the bounding box of this
 		/// <see cref="GraphObj"/>.
@@ -516,6 +516,6 @@ namespace ZeeGraph
 				out string shape, out string coords );
 
 	#endregion
-	
+
 	}
 }

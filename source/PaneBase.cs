@@ -877,17 +877,17 @@ namespace ZeeGraph
         }
 
         /*
-		         System.Drawing.Imaging.Metafile metafile = null; 
-   
-               // create a Metafile object that is compatible with the surface of this 
+		         System.Drawing.Imaging.Metafile metafile = null;
+
+               // create a Metafile object that is compatible with the surface of this
                // form
                using ( Graphics graphics = this.CreateGraphics() )
-               { 
-                  System.IntPtr hdc = graphics.GetHdc(); 
-                  metafile = new Metafile(filename, hdc, new Rectangle( 0, 0, 
-                     (((int) this.ClientRectangle.Width)), 
-							(((int) this.ClientRectangle.Height ))), 
-							MetafileFrameUnit.Point ); 
+               {
+                  System.IntPtr hdc = graphics.GetHdc();
+                  metafile = new Metafile(filename, hdc, new Rectangle( 0, 0,
+                     (((int) this.ClientRectangle.Width)),
+							(((int) this.ClientRectangle.Height ))),
+							MetafileFrameUnit.Point );
                   graphics.ReleaseHdc( hdc );
                }
 
@@ -897,14 +897,14 @@ namespace ZeeGraph
                   metafileGraphics.PageUnit=System.Drawing.GraphicsUnit.Point;
                   PointF P=new Point(this.ClientRectangle.Width,this.ClientRectangle.Height);
                   PointF[] PA=new PointF[]{P};
-                  metafileGraphics.TransformPoints(CoordinateSpace.Page, CoordinateSpace.Device, PA); 
+                  metafileGraphics.TransformPoints(CoordinateSpace.Page, CoordinateSpace.Device, PA);
                   metafileGraphics.PageScale=1f;
-                  metafileGraphics.SmoothingMode = SmoothingMode.AntiAlias; // smooth the 
+                  metafileGraphics.SmoothingMode = SmoothingMode.AntiAlias; // smooth the
                   // output
                   this.masterPane.Draw( metafileGraphics );
                   metafileGraphics.DrawRectangle(new System.Drawing.Pen( Color.Gray),this.ClientRectangle);
                   metafile.Dispose();
-                  
+
                }
 
                return true;
@@ -943,7 +943,7 @@ namespace ZeeGraph
 						{
 							System.Drawing.Imaging.Metafile metafile = null;
 
-							// create a Metafile object that is compatible with the surface of this 
+							// create a Metafile object that is compatible with the surface of this
 							// form
 							using ( Graphics graphics = this.CreateGraphics() )
 							{
@@ -963,7 +963,7 @@ namespace ZeeGraph
 								PointF[] PA = new PointF[] { P };
 								metafileGraphics.TransformPoints( CoordinateSpace.Page, CoordinateSpace.Device, PA );
 								metafileGraphics.PageScale = 1f;
-								metafileGraphics.SmoothingMode = SmoothingMode.AntiAlias; // smooth the 
+								metafileGraphics.SmoothingMode = SmoothingMode.AntiAlias; // smooth the
 								// output
 								this.masterPane.Draw( metafileGraphics );
 								metafileGraphics.DrawRectangle( new System.Drawing.Pen( Color.Gray ), this.ClientRectangle );

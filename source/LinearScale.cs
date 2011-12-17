@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// <remarks>
 	/// LinearScale is the normal, default cartesian axis.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.10 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]

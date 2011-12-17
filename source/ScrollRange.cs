@@ -66,7 +66,7 @@ namespace ZeeGraph
 			_max = rhs._max;
 			_isScrollable = rhs._isScrollable;
 		}
-				
+
 		/// <summary>
 		/// Gets or sets a property that determines if the <see cref="Axis" /> corresponding to
 		/// this <see cref="ScrollRange" /> object can be scrolled.

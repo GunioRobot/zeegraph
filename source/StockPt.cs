@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// The values are remapped to <see cref="Date" />, <see cref="High" />,
 	/// <see cref="Low" />, <see cref="Open" />, and <see cref="Close" />.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.4 $ $Date: 2007/02/07 07:46:46 $ </version>
 	[Serializable]
@@ -66,7 +66,7 @@ namespace ZeeGraph
 		public double Vol;
 
 		/// <summary>
-		/// This is a user value that can be anything.  It is used to provide special 
+		/// This is a user value that can be anything.  It is used to provide special
 		/// property-based coloration to the graph elements.
 		/// </summary>
 		private double _colorValue;

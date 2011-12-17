@@ -29,7 +29,7 @@ namespace ZeeGraph
 	/// Encapsulates a curve type that is displayed as a line and/or a set of
 	/// symbols at each point.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.22 $ $Date: 2007/08/10 16:22:54 $ </version>
 	[Serializable]
@@ -94,9 +94,9 @@ namespace ZeeGraph
 		{
 			return true;
 		}
-		
+
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Create a new <see cref="LineItem"/>, specifying only the legend <see cref="CurveItem.Label" />.
@@ -107,7 +107,7 @@ namespace ZeeGraph
 			_symbol = new Symbol();
 			_line = new Line();
 		}
-		
+
 		/// <summary>
 		/// Create a new <see cref="LineItem"/> using the specified properties.
 		/// </summary>
@@ -289,10 +289,10 @@ namespace ZeeGraph
 			if ( _isVisible )
 			{
 				Line.Draw( g, pane, this, scaleFactor );
-				
+
 				Symbol.Draw( g, pane, this, scaleFactor, IsSelected );
 			}
-		}		
+		}
 
 		/// <summary>
 		/// Draw a legend key entry for this <see cref="LineItem"/> at the specified location
@@ -326,11 +326,11 @@ namespace ZeeGraph
 
 			_line.DrawSegment( g, pane, rect.Left, yMid, rect.Right, yMid, scaleFactor );
 
-            // Draw a sample symbol to the left of the label text				
+            // Draw a sample symbol to the left of the label text
 			_symbol.DrawSymbol( g, pane, xMid, yMid, scaleFactor, false, null );
 
 		}
-	
+
 		/// <summary>
 		/// Loads some pseudo unique colors/symbols into this LineItem.  This
 		/// is mainly useful for differentiating a set of new LineItems without
@@ -348,7 +348,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine the coords for the rectangle associated with a specified point for 
+		/// Determine the coords for the rectangle associated with a specified point for
 		/// this <see cref="CurveItem" />
 		/// </summary>
 		/// <param name="pane">The <see cref="GraphPane" /> to which this curve belongs</param>
@@ -376,7 +376,7 @@ namespace ZeeGraph
 
 			PointF pixPt = new PointF( xAxis.Scale.Transform( _isOverrideOrdinal, i, x ),
 							yAxis.Scale.Transform( _isOverrideOrdinal, i, y ) );
-			
+
 			if ( !pane.Chart.Rect.Contains( pixPt ) )
 				return false;
 

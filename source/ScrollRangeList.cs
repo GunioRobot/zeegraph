@@ -32,7 +32,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// A collection class containing a list of <see cref="ScrollRange"/> objects.
 	/// </summary>
-	/// 
+	///
 	/// <author>John Champion</author>
 	/// <version> $Revision: 3.3 $ $Date: 2006/06/24 20:26:43 $ </version>
 	public class ScrollRangeList : List<ScrollRange>, ICloneable
@@ -76,7 +76,7 @@ namespace ZeeGraph
 			return new ScrollRangeList( this );
 		}
 
-		
+
 	#endregion
 
 	#region List Methods
@@ -88,7 +88,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="ScrollRange"/> object to be accessed.</param>
 		/// <value>A <see cref="ScrollRange"/> object instance</value>
-		public new ScrollRange this[ int index ]  
+		public new ScrollRange this[ int index ]
 		{
 			get
 			{

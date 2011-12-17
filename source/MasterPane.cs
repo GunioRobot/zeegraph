@@ -142,7 +142,7 @@ namespace ZeeGraph
 			/// </summary>
 			/// <seealso cref="MasterPane.InnerPaneGap"/>
 			public static float InnerPaneGap = 10;
-			
+
 			/// <summary>
 			/// The default value for the <see cref="Legend.IsVisible"/> property for
 			/// the <see cref="MasterPane"/> class.
@@ -248,7 +248,7 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	#region Constructors
 
 		/// <summary>
@@ -257,7 +257,7 @@ namespace ZeeGraph
 		public MasterPane() : this( "", new RectangleF( 0, 0, 500, 375 ) )
 		{
 		}
-		
+
 		/// <summary>
 		/// Default constructor for the class.  Specifies the <see cref="PaneBase.Title"/> of
 		/// the <see cref="MasterPane"/>, and the size of the <see cref="PaneBase.Rect"/>.
@@ -608,17 +608,17 @@ namespace ZeeGraph
 			g.SetClip( Rect );
 
 			GraphObjList.Draw( g, this, scaleFactor, ZOrder.B_BehindLegend );
-			
+
 			// Recalculate the legend rect, just in case it has not yet been done
 			// innerRect is the area for the GraphPane's
 			RectangleF innerRect = CalcClientRect( g, scaleFactor );
 			Legend.CalcRect( g, this, scaleFactor, ref innerRect );
 			//this.legend.SetLocation( this,
-			
+
 			Legend.Draw( g, this, scaleFactor );
 
 			GraphObjList.Draw( g, this, scaleFactor, ZOrder.A_InFront );
-			
+
 			// Reset the clipping
 			g.ResetClip();
 
@@ -734,7 +734,7 @@ namespace ZeeGraph
 				if ( pane.Rect.Contains( mousePt ) )
 					return pane;
 			}
-			
+
 			return null;
 		}
 
@@ -752,7 +752,7 @@ namespace ZeeGraph
 				if ( pane.Chart._rect.Contains( mousePt ) )
 					return pane;
 			}
-			
+
 			return null;
 		}
 

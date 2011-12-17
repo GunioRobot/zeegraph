@@ -35,7 +35,7 @@ namespace ZeeGraph
 	/// <see cref="Math.Log(double)" />
 	/// function.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.12 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]
@@ -263,7 +263,7 @@ namespace ZeeGraph
 			}
 
 		}
-		
+
 		/// <summary>
 		/// Internal routine to determine the ordinals of the first and last major axis label.
 		/// </summary>

@@ -104,7 +104,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="PointPair"/> object to be accessed.</param>
 		/// <value>A <see cref="PointPair"/> object reference.</value>
-		public PointPair this[ int index ]  
+		public PointPair this[ int index ]
 		{
 			get
 			{
@@ -241,10 +241,10 @@ namespace ZeeGraph
 		/// </summary>
 		/// <returns>A new, independent copy of the FilteredPointList</returns>
 		virtual public object Clone()
-		{ 
-			return new FilteredPointList( this ); 
+		{
+			return new FilteredPointList( this );
 		}
-		
+
 
 	#endregion
 

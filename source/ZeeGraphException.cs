@@ -42,7 +42,7 @@ namespace ZeeGraph
 			: base ( info, context )
 		{
 		}
-		
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Exception"/> class with a specified
 		/// error message and a reference to the inner exception that is the cause of this exception.
@@ -56,7 +56,7 @@ namespace ZeeGraph
 		{
 
 		}
-	
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Exception"/> class with a specified error message.
 		/// </summary>
@@ -65,7 +65,7 @@ namespace ZeeGraph
 			: base( message )
 		{
 		}
-		
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Exception"/> class.
 		/// </summary>

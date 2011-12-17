@@ -29,7 +29,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// Simple struct that stores X and Y coordinates as doubles.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]

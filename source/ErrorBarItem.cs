@@ -106,7 +106,7 @@ namespace ZeeGraph
 		{
 			_bar = new ErrorBar();
 		}
-		
+
 		/// <summary>
 		/// Create a new <see cref="ErrorBarItem"/> using the specified properties.
 		/// </summary>
@@ -242,7 +242,7 @@ namespace ZeeGraph
 				_bar.Draw( g, pane, this, this.BaseAxis( pane ),
 								this.ValueAxis( pane ), scaleFactor );
 			}
-		}		
+		}
 
 		/// <summary>
 		/// Draw a legend key entry for this <see cref="ErrorBarItem"/> at the specified location
@@ -289,7 +289,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine the coords for the rectangle associated with a specified point for 
+		/// Determine the coords for the rectangle associated with a specified point for
 		/// this <see cref="CurveItem" />
 		/// </summary>
 		/// <param name="pane">The <see cref="GraphPane" /> to which this curve belongs</param>

@@ -29,20 +29,20 @@ using System.Collections.Generic;
 
 namespace ZeeGraph
 {
-	
+
 	/// <summary>
 	/// This class contains the data and methods for an individual curve within
 	/// a graph pane.  It carries the settings for the curve including the
 	/// key and item names, colors, symbols and sizes, linetypes, etc.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion
 	/// modified by Jerry Vos </author>
 	/// <version> $Revision: 3.43 $ $Date: 2007/11/03 04:41:28 $ </version>
 	[Serializable]
 	abstract public class CurveItem : ISerializable, ICloneable
 	{
-	
+
 	#region Fields
 
 		/// <summary>
@@ -107,7 +107,7 @@ namespace ZeeGraph
 		/// access this value.
 		/// </summary>
 		protected bool		_isOverrideOrdinal;
-		
+
 		/// <summary>
 		/// The <see cref="IPointList"/> of value sets that
 		/// represent this <see cref="CurveItem"/>.
@@ -138,7 +138,7 @@ namespace ZeeGraph
 		internal Link _link;
 
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// <see cref="CurveItem"/> constructor the pre-specifies the curve label, the
@@ -156,7 +156,7 @@ namespace ZeeGraph
 				this( label, new PointPairList( x, y ) )
 		{
 		}
-/*	
+/*
 		public CurveItem( string _label, int  y ) : this(  _label, new IPointList( ) )
 		{
 		}
@@ -181,7 +181,7 @@ namespace ZeeGraph
 				//this.points = (IPointList) _points.Clone();
 				_points = points;
 		}
-		
+
 		/// <summary>
 		/// Internal initialization routine thats sets some initial values to defaults.
 		/// </summary>
@@ -197,7 +197,7 @@ namespace ZeeGraph
 			_yAxisIndex = 0;
 			_link = new Link();
 		}
-			
+
 		/// <summary>
 		/// <see cref="CurveItem"/> constructor that specifies the label of the CurveItem.
 		/// This is the same as <c>CurveItem(label, null, null)</c>.
@@ -208,7 +208,7 @@ namespace ZeeGraph
 		{
 		}
 		 /// <summary>
-		 /// 
+		 ///
 		 /// </summary>
 		public CurveItem(  )
 		{
@@ -231,7 +231,7 @@ namespace ZeeGraph
 				this.Tag = ((ICloneable) rhs.Tag).Clone();
 			else
 				this.Tag = rhs.Tag;
-			
+
 			_points = (IPointList) rhs.Points.Clone();
 
 			_link = rhs._link.Clone();
@@ -332,7 +332,7 @@ namespace ZeeGraph
 			info.AddValue( "link", _link );
 		}
 	#endregion
-	
+
 	#region Properties
 		/// <summary>
 		/// A <see cref="Label" /> instance that represents the <see cref="Legend"/>
@@ -345,7 +345,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// The <see cref="Line"/>/<see cref="Symbol"/>/<see cref="Bar"/> 
+		/// The <see cref="Line"/>/<see cref="Symbol"/>/<see cref="Bar"/>
 		/// color (FillColor for the Bar).  This is a common access to
 		/// <see cref="LineBase.Color">Line.Color</see>,
 		/// <see cref="LineBase.Color">Border.Color</see>, and
@@ -368,7 +368,7 @@ namespace ZeeGraph
 				else
 					return Color.Empty;
 			}
-			set 
+			set
 			{
 				if ( this is BarItem )
 				{
@@ -523,7 +523,7 @@ namespace ZeeGraph
 		{
 			get { return this is BarItem || this is HiLowBarItem || this is ErrorBarItem; }
 		}
-		
+
 		/// <summary>
 		/// Determines whether this <see cref="CurveItem"/>
 		/// is a <see cref="PieItem"/>.
@@ -533,7 +533,7 @@ namespace ZeeGraph
 		{
 			get { return this is PieItem; }
 		}
-		
+
 		/// <summary>
 		/// Determines whether this <see cref="CurveItem"/>
 		/// is a <see cref="LineItem"/>.
@@ -551,7 +551,7 @@ namespace ZeeGraph
 		/// </param>
 		/// <value>true if the Z data are included, false otherwise</value>
 		abstract internal bool IsZIncluded( GraphPane pane );
-		
+
 		/// <summary>
 		/// Gets a flag indicating if the X axis is the independent axis for this <see cref="CurveItem" />
 		/// </summary>
@@ -559,7 +559,7 @@ namespace ZeeGraph
 		/// </param>
 		/// <value>true if the X axis is independent, false otherwise</value>
 		abstract internal bool IsXIndependent( GraphPane pane );
-		
+
 		/// <summary>
 		/// Readonly property that gives the number of points that define this
 		/// <see cref="CurveItem"/> object, which is the number of points in the
@@ -567,7 +567,7 @@ namespace ZeeGraph
 		/// </summary>
 		public int NPts
 		{
-			get 
+			get
 			{
 				if ( _points == null )
 					return 0;
@@ -575,7 +575,7 @@ namespace ZeeGraph
 					return _points.Count;
 			}
 		}
-		
+
 		/// <summary>
 		/// The <see cref="IPointList"/> of X,Y point sets that represent this
 		/// <see cref="CurveItem"/>.
@@ -612,7 +612,7 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	#region Rendering Methods
 		/// <summary>
 		/// Do all rendering associated with this <see cref="CurveItem"/> to the specified
@@ -637,7 +637,7 @@ namespace ZeeGraph
 		/// font sizes, etc. according to the actual size of the graph.
 		/// </param>
 		abstract public void Draw( Graphics g, GraphPane pane, int pos, float scaleFactor  );
-		
+
 		/// <summary>
 		/// Draw a legend key entry for this <see cref="CurveItem"/> at the specified location.
 		/// This abstract base method passes through to <see cref="BarItem.DrawLegendKey"/> or
@@ -660,7 +660,7 @@ namespace ZeeGraph
 		/// font sizes, etc. according to the actual size of the graph.
 		/// </param>
 		abstract public void DrawLegendKey( Graphics g, GraphPane pane, RectangleF rect, float scaleFactor );
-		
+
 	#endregion
 
 	#region Utility Methods
@@ -827,7 +827,7 @@ namespace ZeeGraph
 		{
 			this.Color = rotator.NextColor;
 		}
-	
+
 		/// <summary>
 		/// Go through the list of <see cref="PointPair"/> data values for this <see cref="CurveItem"/>
 		/// and determine the minimum and maximum values in the data.
@@ -909,13 +909,13 @@ namespace ZeeGraph
 					( isZIncluded && isXIndependent && ( curZ < yLBound || curZ > yUBound ) ) ||
 					( isZIncluded && !isXIndependent && ( curZ < xLBound || curZ > xUBound ) ) ||
 					( curX <= 0 && isXLog ) || ( curY <= 0 && isYLog );
-			
+
 				// ignoreInitial becomes false at the first non-zero
 				// Y value
 				if (	ignoreInitial && curY != 0 &&
 						curY != PointPair.Missing )
 					ignoreInitial = false;
-			
+
 				if ( 	!ignoreInitial &&
 						!outOfBounds &&
 						curX != PointPair.Missing &&
@@ -945,7 +945,7 @@ namespace ZeeGraph
 							xMax = curZ;
 					}
 				}
-			}	
+			}
 		}
 
 		/// <summary>Returns a reference to the <see cref="Axis"/> object that is the "base"
@@ -1012,7 +1012,7 @@ namespace ZeeGraph
 		/// <returns>The width for an individual bar, in pixel units</returns>
 		public float GetBarWidth( GraphPane pane )
 		{
-			// Total axis width = 
+			// Total axis width =
 			// npts * ( nbars * ( bar + bargap ) - bargap + clustgap )
 			// cg * bar = cluster gap
 			// npts = max number of points in any curve
@@ -1055,7 +1055,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine the coords for the rectangle associated with a specified point for 
+		/// Determine the coords for the rectangle associated with a specified point for
 		/// this <see cref="CurveItem" />
 		/// </summary>
 		/// <param name="pane">The <see cref="GraphPane" /> to which this curve belongs</param>
@@ -1070,7 +1070,7 @@ namespace ZeeGraph
 	#region Inner classes
 
 	#if ( DOTNET1 ) // Is this a .Net 1.1 compilation?
-	
+
 		/// <summary>
 		/// Compares <see cref="CurveItem"/>'s based on the point value at the specified
 		/// index and for the specified axis.
@@ -1080,7 +1080,7 @@ namespace ZeeGraph
 		{
 			private int index;
 			private SortType sortType;
-			
+
 			/// <summary>
 			/// Constructor for Comparer.
 			/// </summary>
@@ -1091,7 +1091,7 @@ namespace ZeeGraph
 				this.sortType = type;
 				this.index = index;
 			}
-			
+
 			/// <summary>
 			/// Compares two <see cref="CurveItem"/>s using the previously specified index value
 			/// and axis.  Sorts in descending order.
@@ -1099,23 +1099,23 @@ namespace ZeeGraph
 			/// <param name="l">Curve to the left.</param>
 			/// <param name="r">Curve to the right.</param>
 			/// <returns>-1, 0, or 1 depending on l.X's relation to r.X</returns>
-			public int Compare( object l, object r ) 
+			public int Compare( object l, object r )
 			{
 				CurveItem cl = (CurveItem) l;
 				CurveItem cr = (CurveItem) r;
 
 				if (cl == null && cr == null )
 					return 0;
-				else if (cl == null && cr != null ) 
+				else if (cl == null && cr != null )
 					return -1;
-				else if (cl != null && cr == null) 
+				else if (cl != null && cr == null)
 					return 1;
 
 				if ( cr != null && cr.NPts <= index )
 					cr = null;
 				if ( cl != null && cl.NPts <= index )
 					cl = null;
-						
+
 				double lVal, rVal;
 
 				if ( sortType == SortType.XValues )
@@ -1128,23 +1128,23 @@ namespace ZeeGraph
 					lVal = ( l != null ) ? System.Math.Abs( cl[index].Y ) : PointPair.Missing;
 					rVal = ( r != null ) ? System.Math.Abs( cr[index].Y ) : PointPair.Missing;
 				}
-				
+
 				if ( lVal == PointPair.Missing || Double.IsInfinity( lVal ) || Double.IsNaN( lVal ) )
 					cl = null;
 				if ( rVal == PointPair.Missing || Double.IsInfinity( rVal ) || Double.IsNaN( rVal ) )
 					cr = null;
-					
+
 				if ( ( cl == null && cr == null) || ( System.Math.Abs( lVal - rVal ) < 1e-10 ) )
 					return 0;
-				else if ( cl == null && cr != null ) 
+				else if ( cl == null && cr != null )
 					return -1;
-				else if ( cl != null && r == null ) 
+				else if ( cl != null && r == null )
 					return 1;
 				else
 					return rVal < lVal ? -1 : 1;
 			}
 		}
-	
+
 #else		// Otherwise, it's .Net 2.0 so use generics
 
 		/// <summary>
@@ -1156,7 +1156,7 @@ namespace ZeeGraph
 		{
 			private int index;
 			private SortType sortType;
-			
+
 			/// <summary>
 			/// Constructor for Comparer.
 			/// </summary>
@@ -1167,7 +1167,7 @@ namespace ZeeGraph
 				this.sortType = type;
 				this.index = index;
 			}
-			
+
 			/// <summary>
 			/// Compares two <see cref="CurveItem"/>s using the previously specified index value
 			/// and axis.  Sorts in descending order.
@@ -1175,20 +1175,20 @@ namespace ZeeGraph
 			/// <param name="l">Curve to the left.</param>
 			/// <param name="r">Curve to the right.</param>
 			/// <returns>-1, 0, or 1 depending on l.X's relation to r.X</returns>
-			public int Compare( CurveItem l, CurveItem r ) 
+			public int Compare( CurveItem l, CurveItem r )
 			{
 				if (l == null && r == null )
 					return 0;
-				else if (l == null && r != null ) 
+				else if (l == null && r != null )
 					return -1;
-				else if (l != null && r == null) 
+				else if (l != null && r == null)
 					return 1;
 
 				if ( r != null && r.NPts <= index )
 					r = null;
 				if ( l != null && l.NPts <= index )
 					l = null;
-						
+
 				double lVal, rVal;
 
 				if ( sortType == SortType.XValues )
@@ -1201,17 +1201,17 @@ namespace ZeeGraph
 					lVal = ( l != null ) ? System.Math.Abs( l[index].Y ) : PointPair.Missing;
 					rVal = ( r != null ) ? System.Math.Abs( r[index].Y ) : PointPair.Missing;
 				}
-				
+
 				if ( lVal == PointPair.Missing || Double.IsInfinity( lVal ) || Double.IsNaN( lVal ) )
 					l = null;
 				if ( rVal == PointPair.Missing || Double.IsInfinity( rVal ) || Double.IsNaN( rVal ) )
 					r = null;
-					
+
 				if ( (l == null && r == null) || ( System.Math.Abs( lVal - rVal ) < 1e-10 ) )
 					return 0;
-				else if (l == null && r != null ) 
+				else if (l == null && r != null )
 					return -1;
-				else if (l != null && r == null) 
+				else if (l != null && r == null)
 					return 1;
 				else
 					return rVal < lVal ? -1 : 1;
@@ -1219,7 +1219,7 @@ namespace ZeeGraph
 		}
 
 	#endif
-	
+
 	#endregion
 
 	}

@@ -62,7 +62,7 @@ namespace ZeeGraph
 		/// class defined for this <see cref="OHLCBarItem"/>.  Use the public
 		/// property <see cref="OHLCBar"/> to access this value.
 		/// </summary>
-		/// 
+		///
 		protected OHLCBar _bar;
 
 	#endregion
@@ -284,7 +284,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine the coords for the rectangle associated with a specified point for 
+		/// Determine the coords for the rectangle associated with a specified point for
 		/// this <see cref="CurveItem" />
 		/// </summary>
 		/// <param name="pane">The <see cref="GraphPane" /> to which this curve belongs</param>

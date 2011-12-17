@@ -29,7 +29,7 @@ namespace ZeeGraph
 	/// </summary>
 	/// <seealso cref="BasicArrayPointList" />
 	/// <seealso cref="IPointList" />
-	/// 
+	///
 	/// <author> Jerry Vos based on code by John Champion
 	/// modified by John Champion</author>
 	/// <version> $Revision: 3.37 $ $Date: 2007/06/29 15:39:07 $ </version>
@@ -52,7 +52,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="PointPair"/> object to be accessed.</param>
 		/// <value>A <see cref="PointPair"/> object reference.</value>
-		public PointPair this[ int index ]  
+		public PointPair this[ int index ]
 		{
 			get { return (PointPair) List[index]; }
 			set { List[index] = value; }
@@ -107,7 +107,7 @@ namespace ZeeGraph
 		public PointPairList( double[] x, double[] y, double[] baseVal )
 		{
 			Add( x, y, baseVal );
-			
+
 			_sorted = false;
 		}
 
@@ -168,7 +168,7 @@ namespace ZeeGraph
 		{
 			foreach ( PointPair point in pointList )
 			Add( point );
-				
+
 			_sorted = false;
 		}
 
@@ -186,12 +186,12 @@ namespace ZeeGraph
 		public void Add( double[] x, double[] y )
 		{
 			int 		len = 0;
-			
+
 			if ( x != null )
 				len = x.Length;
 			if ( y != null && y.Length > len )
 				len = y.Length;
-			
+
 			for ( int i=0; i<len; i++ )
 			{
 				PointPair	point = new PointPair( 0, 0, 0 );
@@ -201,17 +201,17 @@ namespace ZeeGraph
 					point.X = x[i];
 				else
 					point.X = PointPair.Missing;
-					
+
 				if ( y == null )
 					point.Y = (double) i + 1.0;
 				else if ( i < y.Length )
 					point.Y = y[i];
 				else
 					point.Y = PointPair.Missing;
-					
+
 				base.Add( point );
 			}
-			
+
 			_sorted = false;
 		}
 
@@ -231,14 +231,14 @@ namespace ZeeGraph
 		public void Add( double[] x, double[] y, double[] z )
 		{
 			int 		len = 0;
-			
+
 			if ( x != null )
 				len = x.Length;
 			if ( y != null && y.Length > len )
 				len = y.Length;
 			if ( z != null && z.Length > len )
 				len = z.Length;
-						
+
 			for ( int i=0; i<len; i++ )
 			{
 				PointPair point = new PointPair();
@@ -249,24 +249,24 @@ namespace ZeeGraph
 					point.X = x[i];
 				else
 					point.X = PointPair.Missing;
-					
+
 				if ( y == null )
 					point.Y = (double) i + 1.0;
 				else if ( i < y.Length )
 					point.Y = y[i];
 				else
 					point.Y = PointPair.Missing;
-					
+
 				if ( z == null )
 					point.Z = (double) i + 1.0;
 				else if ( i < z.Length )
 					point.Z = z[i];
 				else
 					point.Z = PointPair.Missing;
-					
+
 				base.Add( point );
 			}
-			
+
 			_sorted = false;
 		}
 
@@ -448,7 +448,7 @@ namespace ZeeGraph
 
 			return true;
 		}
-		
+
 		/// <summary>
 		/// Return the HashCode from the base class.
 		/// </summary>
@@ -459,7 +459,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Sorts the list according to the point x values. Will not sort the 
+		/// Sorts the list according to the point x values. Will not sort the
 		/// list if the list is already sorted.
 		/// </summary>
 		/// <returns>If the list was sorted before sort was called</returns>
@@ -472,9 +472,9 @@ namespace ZeeGraph
 			Sort( new PointPair.PointPairComparer( SortType.XValues ) );
 			return false;
 		}
-		
+
 		/// <summary>
-		/// Sorts the list according to the point values . Will not sort the 
+		/// Sorts the list according to the point values . Will not sort the
 		/// list if the list is already sorted.
 		/// </summary>
 		/// <param name="type"></param>  The <see cref = "SortType"/>
@@ -486,12 +486,12 @@ namespace ZeeGraph
 			// if it is already sorted we don't have to sort again
 			if ( _sorted )
 				return true;
-				
+
 			this.Sort( new PointPair.PointPairComparer( type ) );
-			
+
 			return false;
 		}
-		
+
 		/// <summary>
 		/// Set the X values for this <see cref="PointPairList"/> from the specified
 		/// array of double values.
@@ -514,7 +514,7 @@ namespace ZeeGraph
 				if ( i < this.Count )
 					this[i].X = x[i];
 			}
-				
+
 			_sorted = false;
 		}
 
@@ -540,7 +540,7 @@ namespace ZeeGraph
 				if ( i < this.Count )
 					this[i].Y = y[i];
 			}
-				
+
 			_sorted = false;
 		}
 
@@ -566,7 +566,7 @@ namespace ZeeGraph
 				if ( i < this.Count )
 					this[i].Z = z[i];
 			}
-				
+
 			_sorted = false;
 		}
 
@@ -585,7 +585,7 @@ namespace ZeeGraph
 				if ( i < sumList.Count )
 					this[i].Y += sumList[i].Y;
 			}
-				
+
 			//sorted = false;
 		}
 
@@ -604,7 +604,7 @@ namespace ZeeGraph
 				if ( i < sumList.Count )
 					this[i].X += sumList[i].X;
 			}
-				
+
 			_sorted = false;
 		}
 
@@ -640,7 +640,7 @@ namespace ZeeGraph
 				// in the x table to find table entries that bound the x value
 				lo = 0;
 				hi = this.Count - 1;
-			    
+
 				// limit to 1000 loops to avoid an infinite loop problem
 				int j;
 				for ( j=0; j<1000 && hi > lo + 1; j++ )
@@ -699,7 +699,7 @@ namespace ZeeGraph
 				// in the x table to find table entries that bound the x value
 				lo = 0;
 				hi = this.Count - 1;
-			    
+
 				// limit to 1000 loops to avoid an infinite loop problem
 				int j;
 				for ( j=0; j<1000 && hi > lo + 1; j++ )
@@ -818,7 +818,7 @@ namespace ZeeGraph
 				// in the y table to find table entries that bound the y value
 				lo = 0;
 				hi = this.Count - 1;
-			    
+
 				// limit to 1000 loops to avoid an infinite loop problem
 				int j;
 				for ( j=0; j<1000 && hi > lo + 1; j++ )
@@ -925,7 +925,7 @@ namespace ZeeGraph
 			}
 
 			return newPoints;
-		} 
+		}
 
 
 	#endregion

@@ -35,7 +35,7 @@ namespace ZeeGraph
 	/// <see cref="GraphObj"/> objects is maintained by the <see cref="GraphObjList"/>
 	/// collection class.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.2 $ $Date: 2006/09/09 17:32:01 $ </version>
 	[Serializable]
@@ -93,7 +93,7 @@ namespace ZeeGraph
 			set { _isScaled = value; }
 		}
 	#endregion
-	
+
 	#region Constructors
 		/// <overloads>Constructors for the <see cref="ImageObj"/> object</overloads>
 		/// <summary>
@@ -241,7 +241,7 @@ namespace ZeeGraph
 			info.AddValue( "isScaled", _isScaled );
 		}
 	#endregion
-	
+
 	#region Rendering Methods
 		/// <summary>
 		/// Render this object to the specified <see cref="Graphics"/> device
@@ -283,7 +283,7 @@ namespace ZeeGraph
 			}
 
 		}
-		
+
 		/// <summary>
 		/// Determine if the specified screen point lies inside the bounding box of this
 		/// <see cref="ArrowObj"/>.  The bounding box is calculated assuming a distance

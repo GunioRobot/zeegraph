@@ -69,7 +69,7 @@ namespace ZeeGraph
 			this( label, new PointPairList( x, y, baseVal ), color )
 		{
 		}
-		
+
 		/// <summary>
 		/// Create a new <see cref="HiLowBarItem"/> using the specified properties.
 		/// </summary>

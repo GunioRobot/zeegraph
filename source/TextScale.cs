@@ -36,7 +36,7 @@ namespace ZeeGraph
 	/// for points corresponding to that axis are ignored.  That is, if the X axis is an
 	/// ordinal type, then all X values associated with the curves are ignored.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.8 $ $Date: 2006/08/25 05:19:09 $ </version>
 	[Serializable]
@@ -122,7 +122,7 @@ namespace ZeeGraph
 				return 1.0;
 
 		}
-		
+
 		/// <summary>
 		/// Internal routine to determine the ordinals of the first and last major axis label.
 		/// </summary>

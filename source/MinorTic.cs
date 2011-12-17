@@ -244,7 +244,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Gets or sets the display mode for the <see cref="Axis"/> major outside 
+		/// Gets or sets the display mode for the <see cref="Axis"/> major outside
 		/// "cross" tic marks.
 		/// </summary>
 		/// <remarks>
@@ -265,7 +265,7 @@ namespace ZeeGraph
 			set { _isCrossOutside = value; }
 		}
 		/// <summary>
-		/// Gets or sets the display mode for the <see cref="Axis"/> major inside 
+		/// Gets or sets the display mode for the <see cref="Axis"/> major inside
 		/// "cross" tic marks.
 		/// </summary>
 		/// <remarks>
@@ -402,7 +402,7 @@ namespace ZeeGraph
 			public static bool IsOpposite = true;
 
 			/// <summary>
-			/// The default display mode for the <see cref="Axis"/> minor outside 
+			/// The default display mode for the <see cref="Axis"/> minor outside
 			/// "cross" tic marks (<see cref="MinorTic.IsCrossOutside"/> property).
 			/// </summary>
 			/// <remarks>
@@ -419,7 +419,7 @@ namespace ZeeGraph
 			/// <value>true to show the major cross tic marks, false otherwise</value>
 			public static bool IsCrossOutside = false;
 			/// <summary>
-			/// The default display mode for the <see cref="Axis"/> minor inside 
+			/// The default display mode for the <see cref="Axis"/> minor inside
 			/// "cross" tic marks (<see cref="MinorTic.IsCrossInside"/> property).
 			/// </summary>
 			/// <remarks>

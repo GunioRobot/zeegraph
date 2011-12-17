@@ -37,7 +37,7 @@ namespace ZeeGraph
 	/// are 1, 5, and 100, then the tic labels will show 1, 5, and 100, but they will be equal
 	/// distance from each other.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.13 $ $Date: 2007/11/28 02:38:22 $ </version>
 	[Serializable]

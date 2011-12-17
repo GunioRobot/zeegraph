@@ -76,13 +76,13 @@ namespace ZeeGraph
 
 		/// <summary>
 		/// Private field that stores the absolute value of this <see cref="PieItem"/> instance.
-		/// Value will be set to zero if submitted value is less than zero. 
+		/// Value will be set to zero if submitted value is less than zero.
 		/// </summary>
 		private double _pieValue;
 
 		/// <summary>
-		/// An enum that specifies how each <see cref="CurveItem.Label"/> for this <see cref="PieItem"/> object 
-		/// will be displayed.  Use the public property <see cref="LabelType"/> to access this data.  
+		/// An enum that specifies how each <see cref="CurveItem.Label"/> for this <see cref="PieItem"/> object
+		/// will be displayed.  Use the public property <see cref="LabelType"/> to access this data.
 		/// Use enum <see cref="PieLabelType"/>.
 		/// </summary>
 		private PieLabelType _labelType;
@@ -108,7 +108,7 @@ namespace ZeeGraph
 		/// </summary>
 		private PointF _pivotPoint;
 		/// <summary>
-		/// The point at the end of the line between	this <see cref="PieItem"/> and 
+		/// The point at the end of the line between	this <see cref="PieItem"/> and
 		/// it's label (i.e. the beginning of the label display)
 		/// </summary>
 		private PointF _endPoint;
@@ -126,7 +126,7 @@ namespace ZeeGraph
 		private float _startAngle;
 
 		/// <summary>
-		///Private field which holds the length (in degrees) of the arc representing this <see cref="PieItem"/> 
+		///Private field which holds the length (in degrees) of the arc representing this <see cref="PieItem"/>
 		///object.
 		/// </summary>
 		private float _sweepAngle;
@@ -138,14 +138,14 @@ namespace ZeeGraph
 		private float _midAngle;
 
 		/// <summary>
-		///Private field which determines the number of decimal digits displayed to 
-		///in a <see cref="PieItem"/> label containing a value. 
+		///Private field which determines the number of decimal digits displayed to
+		///in a <see cref="PieItem"/> label containing a value.
 		/// </summary>
 		private int _valueDecimalDigits;
 
 		/// <summary>
-		///Private field which determines the number of decimal digits displayed 
-		///in a <see cref="PieItem"/> label containing a percent. 
+		///Private field which determines the number of decimal digits displayed
+		///in a <see cref="PieItem"/> label containing a percent.
 		/// </summary>
 		private int _percentDecimalDigits;
 
@@ -212,13 +212,13 @@ namespace ZeeGraph
 			public static float FontSize = 10;
 
 			/// <summary>
-			/// Default value for the number of decimal digits  
+			/// Default value for the number of decimal digits
 			/// to be displayed when <see cref="LabelType"/>  contains a value.
 			/// </summary>
 			public static int ValueDecimalDigits = 0;
 
 			/// <summary>
-			/// Default value for the number of decimal digits  
+			/// Default value for the number of decimal digits
 			/// to be displayed where <see cref="LabelType"/> contains a percent.
 			/// </summary>
 			public static int PercentDecimalDigits = 2;
@@ -227,7 +227,7 @@ namespace ZeeGraph
 
 		#region PieItem Properties
 		/// <summary>
-		/// Gets or sets the a value which determines the amount, if any, of this <see cref="PieItem"/>  
+		/// Gets or sets the a value which determines the amount, if any, of this <see cref="PieItem"/>
 		/// displacement.
 		/// </summary>
 		public double Displacement
@@ -293,7 +293,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Gets or sets the angle (in degrees) of the radius along which 
+		/// Gets or sets the angle (in degrees) of the radius along which
 		/// this <see cref="PieItem"/> will be displaced.
 		/// </summary>
 		private float MidAngle
@@ -303,8 +303,8 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		///  Gets or sets the value of this <see cref="PieItem"/>.  
-		///  Minimum value is 0. 
+		///  Gets or sets the value of this <see cref="PieItem"/>.
+		///  Minimum value is 0.
 		/// </summary>
 		public double Value
 		{
@@ -313,7 +313,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Gets or sets the <see cref="PieLabelType"/> to be used in displaying 
+		/// Gets or sets the <see cref="PieLabelType"/> to be used in displaying
 		/// <see cref="PieItem"/> labels.
 		/// </summary>
 		public PieLabelType LabelType
@@ -330,7 +330,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Gets or sets the number of decimal digits to be displayed in a <see cref="PieItem"/> 
+		/// Gets or sets the number of decimal digits to be displayed in a <see cref="PieItem"/>
 		/// value label.
 		/// </summary>
 		public int ValueDecimalDigits
@@ -340,7 +340,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Gets or sets the number of decimal digits to be displayed in a <see cref="PieItem"/> 
+		/// Gets or sets the number of decimal digits to be displayed in a <see cref="PieItem"/>
 		/// percent label.
 		/// </summary>
 		public int PercentDecimalDigits
@@ -393,7 +393,7 @@ namespace ZeeGraph
 		/// <param name="color2">The ending display color for the gradient <see cref="Fill"/> for this
 		/// <see cref="PieItem"/> instance.</param>
 		/// <param name="fillAngle">The angle for the gradient <see cref="Fill"/>.</param>
-		/// <param name="displacement">The amount this <see cref="PieItem"/>  instance will be 
+		/// <param name="displacement">The amount this <see cref="PieItem"/>  instance will be
 		/// displaced from the center point.</param>
 		/// <param name="label">Text label for this <see cref="PieItem"/> instance.</param>
 		public PieItem( double pieValue, Color color1, Color color2, float fillAngle,
@@ -410,7 +410,7 @@ namespace ZeeGraph
 		/// </summary>
 		/// <param name="pieValue">The value associated with this <see cref="PieItem"/> instance.</param>
 		/// <param name="color">The display color for this <see cref="PieItem"/> instance.</param>
-		/// <param name="displacement">The amount this <see cref="PieItem"/>  instance will be 
+		/// <param name="displacement">The amount this <see cref="PieItem"/>  instance will be
 		/// displaced from the center point.</param>
 		/// <param name="label">Text label for this <see cref="PieItem"/> instance.</param>
 		public PieItem( double pieValue, Color color, double displacement, string label )
@@ -568,7 +568,7 @@ namespace ZeeGraph
 		/// passed down by the parent <see cref="GraphPane"/> object using the
 		/// <see cref="PaneBase.CalcScaleFactor"/> method, and is used to proportionally adjust
 		/// font sizes, etc. according to the actual size of the graph.
-		/// </param>				
+		/// </param>
 		override public void Draw( Graphics g, GraphPane pane, int pos, float scaleFactor )
 		{
 			if ( pane.Chart._rect.Width <= 0 && pane.Chart._rect.Height <= 0 )
@@ -648,7 +648,7 @@ namespace ZeeGraph
 		/// passed down by the parent <see cref="GraphPane"/> object using the
 		/// <see cref="PaneBase.CalcScaleFactor"/> method, and is used to proportionally adjust
 		/// font sizes, etc. according to the actual size of the graph.
-		/// </param>				
+		/// </param>
 		/// <param name="chartRect">The <see cref="RectangleF"/> (normally the <see cref="Chart.Rect"/>)
 		/// that bounds this pie.</param>
 		/// <returns></returns>
@@ -697,7 +697,7 @@ namespace ZeeGraph
 				//also, might as well get all the display params we can
 				PieItem.CalculatePieChartParams( pane, ref maxDisplacement );
 
-				if ( maxDisplacement != 0 )			 //need new rectangle if any slice exploded	
+				if ( maxDisplacement != 0 )			 //need new rectangle if any slice exploded
 					CalcNewBaseRect( maxDisplacement, ref nonExplRect );
 
 				foreach ( PieItem slice in pane.CurveList )
@@ -781,7 +781,7 @@ namespace ZeeGraph
 		/// passed down by the parent <see cref="GraphPane"/> object using the
 		/// <see cref="PaneBase.CalcScaleFactor"/> method, and is used to proportionally adjust
 		/// font sizes, etc. according to the actual size of the graph.
-		/// </param>				
+		/// </param>
 		public void DrawLabel( Graphics g, GraphPane pane, RectangleF rect, float scaleFactor )
 		{
 			if ( !_labelDetail.IsVisible )
@@ -828,7 +828,7 @@ namespace ZeeGraph
 			//this.labelDetail.IsWrapped = false;
 
 			//label line will come off the explosion radius and then pivot to the horizontal right or left,
-			//dependent on position.. 
+			//dependent on position..
 			//text will be at the end of horizontal segment...
 			CalculateLinePoints( rect, _midAngle );
 
@@ -870,7 +870,7 @@ namespace ZeeGraph
 
 			if ( _midAngle > 135 && _midAngle <= 225 )
 			{
-				//wrap text 
+				//wrap text
 				fill = _endPoint.X - chartRect.X - 5;
 				//need to wrap, so create label rectangle for overloaded DrawString - two rows, max
 				if ( size.Width > fill )
@@ -903,7 +903,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="rect"></param>
 		/// <param name="midAngle"></param>
@@ -935,7 +935,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Build the string that will be displayed as the slice label as determined by 
+		/// Build the string that will be displayed as the slice label as determined by
 		/// <see cref="LabelType"/>.
 		/// </summary>
 		/// <param name="curve">reference to the <see cref="PieItem"/></param>
@@ -976,7 +976,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// A method which calculates a new size for the bounding rectangle for the non-displaced 
+		/// A method which calculates a new size for the bounding rectangle for the non-displaced
 		/// <see cref="PieItem"/>'s in the pie chart.  This method is called after it is found
 		/// that at least one slice is displaced.
 		/// </summary>
@@ -985,8 +985,8 @@ namespace ZeeGraph
 		/// <param name="baseRect">The current bounding rectangle</param>
 		private static void CalcNewBaseRect( double maxDisplacement, ref RectangleF baseRect )
 		{
-			//displacement expressed in terms of % of pie radius	...do not want exploded slice to 
-			//go beyond nonExplRect, but want to maintain the same center point...therefore, got to 
+			//displacement expressed in terms of % of pie radius	...do not want exploded slice to
+			//go beyond nonExplRect, but want to maintain the same center point...therefore, got to
 			//reduce the diameter of the nonexploded pie by the alue of the displacement
 
 			float xDispl = (float)( ( maxDisplacement * baseRect.Width ) );
@@ -1036,7 +1036,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine the coords for the rectangle associated with a specified point for 
+		/// Determine the coords for the rectangle associated with a specified point for
 		/// this <see cref="CurveItem" />
 		/// </summary>
 		/// <param name="pane">The <see cref="GraphPane" /> to which this curve belongs</param>

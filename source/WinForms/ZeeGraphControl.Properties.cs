@@ -219,7 +219,7 @@ namespace ZeeGraph.WinForms
 		}
 
 		/// <summary>
-		/// Gets or sets a value that determines which Mouse button will be used to 
+		/// Gets or sets a value that determines which Mouse button will be used to
 		/// select <see cref="CurveItem" />'s.
 		/// </summary>
 		/// <remarks>
@@ -235,7 +235,7 @@ namespace ZeeGraph.WinForms
 			set { _selectButtons = value; }
 		}
 		/// <summary>
-		/// Gets or sets a value that determines which Modifier keys will be used to 
+		/// Gets or sets a value that determines which Modifier keys will be used to
 		/// select <see cref="CurveItem" />'s.
 		/// </summary>
 		/// <remarks>
@@ -252,7 +252,7 @@ namespace ZeeGraph.WinForms
 		}
 
 		/// <summary>
-		/// Gets or sets a value that determines which Modifier keys will be used to 
+		/// Gets or sets a value that determines which Modifier keys will be used to
 		/// append a <see cref="CurveItem" /> to the selection list.
 		/// </summary>
 		[Bindable( true ), Category( "Display" ), NotifyParentProperty( true ),
@@ -683,7 +683,7 @@ namespace ZeeGraph.WinForms
 		/// to the actual range of the data as returned by <see cref="CurveList.GetRange" /> at the
 		/// time that <see cref="AxisChange" /> was last called.  Note that a value of true
 		/// can override any setting of <see cref="ScrollMinX" />, <see cref="ScrollMaxX" />,
-		/// <see cref="ScrollMinY" />, <see cref="ScrollMaxY" />, 
+		/// <see cref="ScrollMinY" />, <see cref="ScrollMaxY" />,
 		/// <see cref="ScrollMinY2" />, and <see cref="ScrollMaxY2" />.  Note also that you must
 		/// call <see cref="AxisChange" /> from the <see cref="ZeeGraphControl" /> for this to
 		/// work properly (e.g., don't call it directly from the <see cref="GraphPane" />.

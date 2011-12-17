@@ -31,7 +31,7 @@ namespace ZeeGraph
 	/// and <see cref="IsTitleAtCross" /> properties, which are specifically associated with
 	/// the <see cref="Axis" /> <see cref="Axis.Title" />.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]

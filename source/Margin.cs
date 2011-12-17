@@ -28,7 +28,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// Class that handles that stores the margin properties for the GraphPane
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]

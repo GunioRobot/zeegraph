@@ -159,7 +159,7 @@ namespace ZeeGraph
 		{
 			return ToRGB( this );
 		}
-			
+
 		/// <summary>
 		/// Convert a <see cref="Color" /> value to an equivalent <see cref="HSBColor" /> value.
 		/// </summary>
@@ -214,12 +214,12 @@ namespace ZeeGraph
 			else
 				h = 4 + ( r - g ) / delta;	// between magenta & cyan
 
-			hsbColor.H = (byte) ( h * 42.5 );	
+			hsbColor.H = (byte) ( h * 42.5 );
 			if ( hsbColor.H < 0 )
 				hsbColor.H += 255;
 
 			return hsbColor;
 		}
-	
+
 	}
 }

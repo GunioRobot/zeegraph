@@ -32,7 +32,7 @@ namespace ZeeGraph
 	/// </remarks>
 	/// <seealso cref="PointPairList" />
 	/// <seealso cref="BasicArrayPointList" />
-	/// 
+	///
 	/// <author> John Champion</author>
 	/// <version> $Revision: 1.6 $ $Date: 2007/11/11 07:29:43 $ </version>
 	public interface IPointList : ICloneable

@@ -39,7 +39,7 @@ namespace ZeeGraph
 	/// If <see cref="BarBase"/> is Y-oriented, then the symbol type should be
 	/// set to <see cref="SymbolType.VDash"/> to get the same effect.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.21 $ $Date: 2007/08/10 16:22:54 $ </version>
 	[Serializable]
@@ -118,7 +118,7 @@ namespace ZeeGraph
 			get { return _isVisible; }
 			set { _isVisible = value; }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets the <see cref="System.Drawing.Color"/> data for this
 		/// <see cref="ErrorBar"/>.
@@ -156,7 +156,7 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Default constructor that sets all <see cref="ErrorBar"/> properties to
@@ -346,13 +346,13 @@ namespace ZeeGraph
 
 			float	pixBase, pixValue, pixLowValue;
 			double	scaleBase, scaleValue, scaleLowValue;
-		
+
 			if ( curve.Points != null && this.IsVisible )
 			{
 				using ( Pen pen = !curve.IsSelected ? new Pen( _color, _penWidth ) :
 						new Pen( Selection.Border.Color, Selection.Border.Width ) )
 				{
-					// Loop over each defined point							
+					// Loop over each defined point
 					for ( int i = 0; i < curve.Points.Count; i++ )
 					{
 						valueHandler.GetValues( curve, i, out scaleBase,
@@ -383,6 +383,6 @@ namespace ZeeGraph
 			}
 		}
 	#endregion
-	
+
 	}
 }

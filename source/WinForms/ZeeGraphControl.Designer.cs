@@ -2,15 +2,15 @@ namespace ZeeGraph.WinForms
 {
 	partial class ZeeGraphControl
 	{
-		/// <summary> 
+		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
 		#region Component Designer generated code
 
-		/// <summary> 
-		/// Required method for Designer support - do not modify 
+		/// <summary>
+		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent()
@@ -21,39 +21,39 @@ namespace ZeeGraph.WinForms
 			this.pointToolTip = new System.Windows.Forms.ToolTip( this.components );
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip( this.components );
 			this.SuspendLayout();
-			// 
+			//
 			// vScrollBar1
-			// 
+			//
 			this.vScrollBar1.Location = new System.Drawing.Point( 128, 0 );
 			this.vScrollBar1.Name = "vScrollBar1";
 			this.vScrollBar1.Size = new System.Drawing.Size( 17, 128 );
 			this.vScrollBar1.TabIndex = 0;
 			//this.vScrollBar1.MouseCaptureChanged += new System.EventHandler( this.ScrollBarMouseCaptureChanged );
 			this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler( this.vScrollBar1_Scroll );
-			// 
+			//
 			// hScrollBar1
-			// 
+			//
 			this.hScrollBar1.Location = new System.Drawing.Point( 0, 128 );
 			this.hScrollBar1.Name = "hScrollBar1";
 			this.hScrollBar1.Size = new System.Drawing.Size( 128, 17 );
 			this.hScrollBar1.TabIndex = 1;
 			//this.hScrollBar1.MouseCaptureChanged += new System.EventHandler( this.ScrollBarMouseCaptureChanged );
 			this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler( this.hScrollBar1_Scroll );
-			// 
+			//
 			// pointToolTip
-			// 
+			//
 			this.pointToolTip.AutoPopDelay = 5000;
 			this.pointToolTip.InitialDelay = 100;
 			this.pointToolTip.ReshowDelay = 0;
-			// 
+			//
 			// contextMenuStrip1
-			// 
+			//
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size( 61, 4 );
 			this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler( this.contextMenuStrip1_Opening );
-			// 
+			//
 			// ZeeGraphControl
-			// 
+			//
 			this.AutoScaleDimensions = new System.Drawing.SizeF( 6F, 13F );
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ContextMenuStrip = this.contextMenuStrip1;

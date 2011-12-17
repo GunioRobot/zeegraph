@@ -27,7 +27,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// A class than contains information about the position of an object on the graph.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.14 $ $Date: 2006/06/24 20:26:43 $ </version>
 	[Serializable]
@@ -54,7 +54,7 @@ namespace ZeeGraph
 							_y,
 							_width,
 							_height;
-							
+
 		/// <summary>
 		/// Private field to store the coordinate system to be used for defining the
 		/// object position.  Use the public property
@@ -262,7 +262,7 @@ namespace ZeeGraph
 			//set { this.X2 = value.X; this.Y2 = value.Y; }
 		}
 	#endregion
-	
+
 	#region Constructors
 
 		/// <summary>
@@ -289,7 +289,7 @@ namespace ZeeGraph
 				this( x, y, coordType, AlignH.Left, AlignV.Top )
 		{
 		}
-		
+
 		/// <summary>
 		/// Constructor for the <see cref="Location"/> class that specifies the
 		/// x, y position and the <see cref="CoordType"/>.
@@ -317,7 +317,7 @@ namespace ZeeGraph
 			_alignH = alignH;
 			_alignV = alignV;
 		}
-		
+
 		/// <summary>
 		/// Constructor for the <see cref="Location"/> class that specifies the
 		/// (x, y), (width, height), and the <see cref="CoordType"/>.
@@ -348,7 +348,7 @@ namespace ZeeGraph
 			_width = width;
 			_height = height;
 		}
-		
+
 		/// <summary>
 		/// The Copy Constructor
 		/// </summary>
@@ -447,7 +447,7 @@ namespace ZeeGraph
 			return Transform( pane, _x, _y,
 						_coordinateFrame );
 		}
-		
+
 		/// <summary>
 		/// Transform a data point from the specified coordinate type
 		/// (<see cref="CoordType"/>) to display device coordinates (pixels).
@@ -472,7 +472,7 @@ namespace ZeeGraph
 		{
 			return pane.TransformCoord( x, y, coord );
 		}
-		
+
 		/// <summary>
 		/// Transform this <see cref="Location"/> from the coordinate system
 		/// as specified by <see cref="CoordinateFrame"/> to the device coordinates
@@ -482,7 +482,7 @@ namespace ZeeGraph
 		/// The returned
 		/// <see cref="PointF"/> struct represents the top-left corner of the
 		/// object that honors the <see cref="Location"/> properties.
-		/// The <see cref="AlignH"/> and <see cref="AlignV"/> properties are honored in 
+		/// The <see cref="AlignH"/> and <see cref="AlignV"/> properties are honored in
 		/// this transformation.
 		/// </remarks>
 		/// <param name="pane">
@@ -495,17 +495,17 @@ namespace ZeeGraph
 		public PointF TransformTopLeft( PaneBase pane, float width, float height )
 		{
 			PointF pt = Transform( pane );
-			
+
 			if ( _alignH == AlignH.Right )
 				pt.X -= width;
 			else if ( _alignH == AlignH.Center )
 				pt.X -= width / 2.0F;
-				
+
 			if ( _alignV == AlignV.Bottom )
 				pt.Y -= height;
 			else if ( _alignV == AlignV.Center )
 				pt.Y -= height / 2.0F;
-			
+
 			return pt;
 		}
 
@@ -547,7 +547,7 @@ namespace ZeeGraph
 		/// </summary>
 		/// <remarks>
 		/// This method transforms the location to output device pixel units.
-		/// The <see cref="AlignH"/> and <see cref="AlignV"/> properties are honored in 
+		/// The <see cref="AlignH"/> and <see cref="AlignV"/> properties are honored in
 		/// this transformation.
 		/// </remarks>
 		/// <value>A <see cref="RectangleF"/> in pixel units.</value>

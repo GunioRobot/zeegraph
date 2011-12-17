@@ -30,7 +30,7 @@ namespace ZeeGraph
 	/// the right side of the <see cref="Chart.Rect"/> of the <see cref="GraphPane"/>
 	/// object
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.16 $ $Date: 2007/04/16 00:03:05 $ </version>
 	[Serializable]
@@ -51,7 +51,7 @@ namespace ZeeGraph
 			/// </summary>
 			public static bool IsVisible = false;
 			/// <summary>
-			/// Determines if a line will be drawn at the zero value for the 
+			/// Determines if a line will be drawn at the zero value for the
 			/// <see cref="Y2Axis"/>, that is, a line that
 			/// divides the negative values from positive values.
 			/// <seealso cref="MajorGrid.IsZeroLine"/>.
@@ -182,9 +182,9 @@ namespace ZeeGraph
 		/// </summary>
 		/// <remarks>
 		/// The primary axes are the <see cref="XAxis" /> (always), the first
-		/// <see cref="YAxis" /> in the <see cref="GraphPane.YAxisList" /> 
+		/// <see cref="YAxis" /> in the <see cref="GraphPane.YAxisList" />
 		/// (<see cref="CurveItem.YAxisIndex" /> = 0),  and the first
-		/// <see cref="Y2Axis" /> in the <see cref="GraphPane.Y2AxisList" /> 
+		/// <see cref="Y2Axis" /> in the <see cref="GraphPane.Y2AxisList" />
 		/// (<see cref="CurveItem.YAxisIndex" /> = 0).  Note that
 		/// <see cref="GraphPane.YAxis" /> and <see cref="GraphPane.Y2Axis" />
 		/// always reference the primary axes.

@@ -32,7 +32,7 @@ namespace ZeeGraph
 	/// <remarks>
 	/// This class is typically a base class for actual <see cref="PointPair" /> type implementations.
 	/// </remarks>
-	/// 
+	///
 	/// <author> Jerry Vos modified by John Champion </author>
 	/// <version> $Revision: 1.4 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]

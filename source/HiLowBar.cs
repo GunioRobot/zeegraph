@@ -35,7 +35,7 @@ namespace ZedGraph
 	/// The Hi-Low Bars are the "floating" bars that have a lower and upper value and
 	/// appear at each defined point.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.18 $ $Date: 2007/10/26 08:19:49 $ </version>
 	[Serializable]
@@ -97,7 +97,7 @@ namespace ZedGraph
 		}
 
 		/// <summary>
-		/// Default constructor that sets the 
+		/// Default constructor that sets the
 		/// <see cref="Color"/> as specified, and the remaining
 		/// <see cref="HiLowBar"/> properties to default
 		/// values as defined in the <see cref="Bar.Default"/> class.
@@ -114,7 +114,7 @@ namespace ZedGraph
 		}
 
 		/// <summary>
-		/// Default constructor that sets the 
+		/// Default constructor that sets the
 		/// <see cref="Color"/> and <see cref="Size"/> as specified, and the remaining
 		/// <see cref="HiLowBar"/> properties to default
 		/// values as defined in the <see cref="Bar.Default"/> class.
@@ -230,7 +230,7 @@ namespace ZedGraph
 		/// the <see cref="Size"/> value, or it will be based on available
 		/// space similar to <see cref="BarItem"/> objects.
 		/// </summary>
-		/// <remarks>If true, then the value of <see cref="Size"/> is ignored. 
+		/// <remarks>If true, then the value of <see cref="Size"/> is ignored.
 		/// If this value is true, then <see cref="BarSettings.MinClusterGap"/> will be used to
 		/// determine the total space between each bar.  If the base axis is non-ordinal, then
 		/// <see cref="BarSettings.ClusterScaleWidth" /> will be active.  In this case, you may
@@ -370,7 +370,7 @@ namespace ZedGraph
 			// use integral size
 			return (int)( width + 0.5f );
 		}
-		
+
 
 	#endregion
 

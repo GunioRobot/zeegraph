@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// This class handles the drawing of the curve <see cref="JapaneseCandleStick"/> objects.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.10 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]
@@ -72,7 +72,7 @@ namespace ZeeGraph
 		private Border _fallingBorder;
 
 		/// <summary>
-		/// Private field that stores the CandleStick color when the <see cref="StockPt.Close" /> 
+		/// Private field that stores the CandleStick color when the <see cref="StockPt.Close" />
 		/// value is less than the <see cref="StockPt.Open" /> value.  Use the public
 		/// property <see cref="FallingColor"/> to access this value.
 		/// </summary>
@@ -418,7 +418,7 @@ namespace ZeeGraph
 				using ( Pen risingPen = new Pen(  tColor, tPenWidth ) )
 				using ( Pen fallingPen = new Pen( tFallingColor, tPenWidth ) )
 				{
-					// Loop over each defined point							
+					// Loop over each defined point
 					for ( int i = 0; i < curve.Points.Count; i++ )
 					{
 						PointPair pt = curve.Points[i];

@@ -28,7 +28,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// A class that maintains hyperlink information for a clickable object on the graph.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.6 $ $Date: 2007/04/16 00:03:02 $ </version>
 	// /// <seealso cref="ZedGraph.Web.IsImageMap"/>
@@ -39,7 +39,7 @@ namespace ZeeGraph
 	#region Fields
 
 		/// <summary>
-		/// Internal field that stores the title string for this link.  
+		/// Internal field that stores the title string for this link.
 		/// </summary>
 		internal string _title;
 
@@ -215,7 +215,7 @@ namespace ZeeGraph
 		/// </summary>
 		/// <remarks>
 		/// An "index" parameter is added to the <see cref="Url" /> property for this
-		/// link to indicate which point was selected.  Further, if the 
+		/// link to indicate which point was selected.  Further, if the
 		/// X or Y axes that correspond to this <see cref="CurveItem" /> are of
 		/// <see cref="AxisType.Text" />, then an
 		/// additional parameter will be added containing the text value that

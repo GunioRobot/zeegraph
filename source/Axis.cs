@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// <see cref="XAxis"/>, <see cref="YAxis"/>, and <see cref="Y2Axis"/> classes
 	/// to define specific characteristics for those types.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion modified by Jerry Vos </author>
 	/// <version> $Revision: 3.73 $ $Date: 2007/05/19 06:06:05 $ </version>
 	[Serializable]
@@ -1170,9 +1170,9 @@ namespace ZeeGraph
 		/// </summary>
 		/// <remarks>
 		/// The primary axes are the <see cref="XAxis" /> (always), the first
-		/// <see cref="YAxis" /> in the <see cref="GraphPane.YAxisList" /> 
+		/// <see cref="YAxis" /> in the <see cref="GraphPane.YAxisList" />
 		/// (<see cref="CurveItem.YAxisIndex" /> = 0),  and the first
-		/// <see cref="Y2Axis" /> in the <see cref="GraphPane.Y2AxisList" /> 
+		/// <see cref="Y2Axis" /> in the <see cref="GraphPane.Y2AxisList" />
 		/// (<see cref="CurveItem.YAxisIndex" /> = 0).  Note that
 		/// <see cref="GraphPane.YAxis" /> and <see cref="GraphPane.Y2Axis" />
 		/// always reference the primary axes.

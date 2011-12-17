@@ -42,7 +42,7 @@ namespace ZeeGraph
 	#region Properties
 
 		/// <summary>
-		/// This is a user value that can be anything.  It is used to provide special 
+		/// This is a user value that can be anything.  It is used to provide special
 		/// property-based coloration to the graph elements.
 		/// </summary>
 		private double _colorValue;

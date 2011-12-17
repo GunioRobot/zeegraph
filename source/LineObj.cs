@@ -34,7 +34,7 @@ namespace ZeeGraph
 	/// This should not be confused with the <see cref="LineItem" /> class, which represents
 	/// a set of points plotted together as a "curve".  The <see cref="LineObj" /> class is
 	/// a single line segment, drawn as a "decoration" on the chart.</remarks>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.4 $ $Date: 2007/01/25 07:56:09 $ </version>
 	[Serializable]

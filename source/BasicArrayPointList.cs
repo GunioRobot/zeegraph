@@ -32,7 +32,7 @@ namespace ZeeGraph
 	/// </remarks>
 	/// <seealso cref="PointPairList" />
 	/// <seealso cref="IPointList" />
-	/// 
+	///
 	/// <author> John Champion</author>
 	/// <version> $Revision: 3.4 $ $Date: 2007/02/18 05:51:53 $ </version>
 	[Serializable]
@@ -63,7 +63,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="PointPair"/> object to be accessed.</param>
 		/// <value>A <see cref="PointPair"/> object reference.</value>
-		public PointPair this[ int index ]  
+		public PointPair this[ int index ]
 		{
 			get
 			{
@@ -140,7 +140,7 @@ namespace ZeeGraph
 			return new BasicArrayPointList( this );
 		}
 
-		
+
 	#endregion
 
 	}

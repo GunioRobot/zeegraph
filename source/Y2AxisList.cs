@@ -32,7 +32,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// A collection class containing a list of <see cref="YAxis"/> objects.
 	/// </summary>
-	/// 
+	///
 	/// <author>John Champion</author>
 	/// <version> $Revision: 3.3 $ $Date: 2006/06/24 20:26:43 $ </version>
 	[Serializable]
@@ -171,7 +171,7 @@ namespace ZeeGraph
 		/// <param name="title">The title string for the new axis</param>
 		/// <returns>An integer representing the ordinal position of the new <see cref="Y2Axis" /> in
 		/// this <see cref="Y2AxisList" />.  This is the value that you would set the
-		/// <see cref="CurveItem.YAxisIndex" /> property of a given <see cref="CurveItem" /> to 
+		/// <see cref="CurveItem.YAxisIndex" /> property of a given <see cref="CurveItem" /> to
 		/// assign it to this new <see cref="Y2Axis" />.  Note that, for a <see cref="Y2Axis" />,
 		/// you would also need to set the <see cref="CurveItem.IsY2Axis" /> property to true.</returns>
 		public int Add( string title )

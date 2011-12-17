@@ -136,7 +136,7 @@ namespace ZeeGraph
 				/// <param name="index">The ordinal position (zero-based) of the
 				/// <see cref="ScaleState"/> object to be accessed.</param>
 				/// <value>A <see cref="ScaleState"/> object reference.</value>
-				public ScaleState this[ int index ]  
+				public ScaleState this[ int index ]
 				{
 					get { return (ScaleState) List[index]; }
 					set { List[index] = value; }
@@ -154,7 +154,7 @@ namespace ZeeGraph
 		*/
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="list"></param>
 		public void ApplyScale( YAxisList list )
@@ -165,7 +165,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="list"></param>
 		public void ApplyScale( Y2AxisList list )

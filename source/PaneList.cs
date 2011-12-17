@@ -32,7 +32,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// A collection class containing a list of <see cref="GraphPane"/> objects.
 	/// </summary>
-	/// 
+	///
 	/// <author>John Champion</author>
 	/// <version> $Revision: 3.6 $ $Date: 2006/06/24 20:26:43 $ </version>
 	[Serializable]
@@ -79,7 +79,7 @@ namespace ZeeGraph
 			return new PaneList( this );
 		}
 
-		
+
 	#endregion
 
 	#region Serialization
@@ -121,7 +121,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="GraphPane"/> object to be accessed.</param>
 		/// <value>A <see cref="GraphPane"/> object reference.</value>
-		public GraphPane this[ int index ]  
+		public GraphPane this[ int index ]
 		{
 			get { return( (GraphPane) List[index] ); }
 			set { List[index] = value; }
@@ -134,7 +134,7 @@ namespace ZeeGraph
 		/// <param name="title">The string title of the
 		/// <see cref="GraphPane"/> object to be accessed.</param>
 		/// <value>A <see cref="GraphPane"/> object reference.</value>
-		public GraphPane this[ string title ]  
+		public GraphPane this[ string title ]
 		{
 			get
 			{

@@ -34,7 +34,7 @@ namespace ZeeGraph
 	/// ExponentScale is a non-linear axis in which the values are scaled using an exponential function
 	/// with the <see cref="Scale.Exponent" /> property.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion with contributions by jackply </author>
 	/// <version> $Revision: 1.8 $ $Date: 2007/04/16 00:03:01 $ </version>
 	[Serializable]

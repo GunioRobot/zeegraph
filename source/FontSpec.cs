@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// <see cref="AlignH"/> and <see cref="AlignV"/> parameters in the
 	/// <see cref="Draw(Graphics,PaneBase,string,float,float,AlignH,AlignV,float)"/> method.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.24 $ $Date: 2007/01/25 07:56:08 $ </version>
 	[Serializable]
@@ -1088,7 +1088,7 @@ namespace ZeeGraph
 		/// the specified <see cref="SizeF"/> as an outer limit.
 		/// </summary>
 		/// <remarks>
-		/// This method will allow the text to wrap as necessary to fit the 
+		/// This method will allow the text to wrap as necessary to fit the
 		/// <see paramref="layoutArea"/>.
 		/// </remarks>
 		/// <param name="g">
@@ -1359,7 +1359,7 @@ namespace ZeeGraph
 			// x,y location)
 			matrix.Translate( x, y, MatrixOrder.Prepend );
 
-			// Rotate the coordinate system according to the 
+			// Rotate the coordinate system according to the
 			// specified angle of the FontSpec
 			if ( _angle != 0.0F )
 				matrix.Rotate( -angle, MatrixOrder.Prepend );
@@ -1423,7 +1423,7 @@ namespace ZeeGraph
 			// parameters
 			matrix.Translate( -xa, -ya, MatrixOrder.Prepend );
 
-			// Rotate the coordinate system according to the 
+			// Rotate the coordinate system according to the
 			// specified angle of the FontSpec
 			if ( angle != 0.0F )
 				matrix.Rotate( angle, MatrixOrder.Prepend );

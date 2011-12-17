@@ -27,7 +27,7 @@ namespace ZeeGraph
 	/// A collection class containing a list of <see cref="TextObj"/> objects
 	/// to be displayed on the graph.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]
@@ -70,7 +70,7 @@ namespace ZeeGraph
 			return new GraphObjList( this );
 		}
 
-		
+
 	#endregion
 
 	#region Methods
@@ -82,7 +82,7 @@ namespace ZeeGraph
 		/// <param name="index">The ordinal position (zero-based) of the
 		/// <see cref="GraphObj"/> object to be accessed.</param>
 		/// <value>A <see cref="GraphObj"/> object reference.</value>
-		public GraphObj this[ int index ]  
+		public GraphObj this[ int index ]
 		{
 			get { return( (GraphObj) List[index] ); }
 			set { List[index] = value; }
@@ -96,7 +96,7 @@ namespace ZeeGraph
 		/// <param name="tag">The <see cref="String"/> type tag to search for.</param>
 		/// <value>A <see cref="GraphObj"/> object reference.</value>
 		/// <seealso cref="IndexOfTag"/>
-		public GraphObj this[string tag]  
+		public GraphObj this[string tag]
 		{
 			get
 			{
@@ -253,7 +253,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Determine if a mouse point is within any <see cref="GraphObj"/>, and if so, 
+		/// Determine if a mouse point is within any <see cref="GraphObj"/>, and if so,
 		/// return the index number of the the <see cref="GraphObj"/>.
 		/// </summary>
 		/// <param name="mousePt">The screen point, in pixel coordinates.</param>
@@ -281,7 +281,7 @@ namespace ZeeGraph
 		public bool FindPoint( PointF mousePt, PaneBase pane, Graphics g, float scaleFactor, out int index )
 		{
 			index = -1;
-			
+
 			// Search in reverse direction to honor the Z-order
 			for ( int i=Count-1; i>=0; i-- )
 			{
@@ -297,7 +297,7 @@ namespace ZeeGraph
 			else
 				return false;
 		}
-		
+
 
 	#endregion
 	}

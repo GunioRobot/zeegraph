@@ -152,7 +152,7 @@ namespace ZeeGraph
 			public static AlignV AlignV = AlignV.Center;
 		}
 	#endregion
-	
+
 	#region Constructors
 		/// <summary>
 		/// Generic initializer to default values
@@ -186,7 +186,7 @@ namespace ZeeGraph
 		{
 			Init();
 		}
-		
+
 		/// <summary>
 		/// Constructor that specifies the color, brush, and type for this fill.
 		/// </summary>
@@ -201,7 +201,7 @@ namespace ZeeGraph
 			_brush = brush;
 			_type = type;
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a solid color-fill, setting <see cref="Type"/> to
 		/// <see cref="FillType.Solid"/>, and setting <see cref="Color"/> to the
@@ -215,7 +215,7 @@ namespace ZeeGraph
 			if ( color != Color.Empty )
 				_type = FillType.Solid;
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a linear gradient color-fill, setting <see cref="Type"/> to
 		/// <see cref="FillType.Brush"/> using the specified colors and angle.
@@ -237,7 +237,7 @@ namespace ZeeGraph
 
 			this.CreateBrushFromBlend( blend, angle );
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a linear gradient color-fill, setting <see cref="Type"/> to
 		/// <see cref="FillType.Brush"/> using the specified colors.
@@ -247,7 +247,7 @@ namespace ZeeGraph
 		public Fill( Color color1, Color color2 ) : this( color1, color2, 0.0F )
 		{
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a linear gradient color-fill, setting <see cref="Type"/> to
 		/// <see cref="FillType.Brush"/> using the specified colors.  This gradient fill
@@ -283,10 +283,10 @@ namespace ZeeGraph
 			blend.Positions[1] = 0.5f;
 			blend.Positions[2] = 1.0f;
 			_type = FillType.Brush;
-			
+
 			this.CreateBrushFromBlend( blend, angle );
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a linear gradient multi-color-fill, setting <see cref="Type"/> to
 		/// <see cref="FillType.Brush"/> using the specified colors.  This gradient fill
@@ -416,7 +416,7 @@ namespace ZeeGraph
 			_image = image;
 			_wrapMode = wrapMode;
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a <see cref="Brush"/> fill, using a user-supplied, custom
 		/// <see cref="Brush"/>.  The brush will be scaled to fit the destination screen object
@@ -427,7 +427,7 @@ namespace ZeeGraph
 		public Fill( Brush brush ) : this( brush, Default.IsScaled )
 		{
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a <see cref="Brush"/> fill, using a user-supplied, custom
 		/// <see cref="Brush"/>.  The brush will be scaled to fit the destination screen object
@@ -445,7 +445,7 @@ namespace ZeeGraph
 			_brush = (Brush) brush.Clone();
 			_type = FillType.Brush;
 		}
-		
+
 		/// <summary>
 		/// Constructor that creates a <see cref="Brush"/> fill, using a user-supplied, custom
 		/// <see cref="Brush"/>.  This constructor will make the brush unscaled (see <see cref="IsScaled"/>),
@@ -729,7 +729,7 @@ namespace ZeeGraph
 			get { return _isScaled; }
 			set { _isScaled = value; }
 		}
-		
+
 		/// <summary>
 		/// Determines how the brush will be aligned with the filled object
 		/// in the horizontal direction.  This value is a <see cref="ZeeGraph.AlignH"/> enumeration.
@@ -741,7 +741,7 @@ namespace ZeeGraph
 			get { return _alignH; }
 			set { _alignH = value; }
 		}
-		
+
 		/// <summary>
 		/// Determines how the brush will be aligned with the filled object
 		/// in the vertical direction.  This value is a <see cref="ZeeGraph.AlignV"/> enumeration.
@@ -887,7 +887,7 @@ namespace ZeeGraph
 					rect.Height = 1.0F;
 				if ( rect.Width < 1.0F )
 					rect.Width = 1.0F;
-					
+
 				//Brush	brush;
 				if ( _type == FillType.Brush )
 				{
@@ -959,7 +959,7 @@ namespace ZeeGraph
 
 			if ( _rangeMax - _rangeMin < 1e-20 || val == double.MaxValue )
 				valueFraction = 0.5;
-			else			
+			else
 				valueFraction = ( val - _rangeMin ) / ( _rangeMax - _rangeMin );
 
 			if ( valueFraction < 0.0 )
@@ -991,7 +991,7 @@ namespace ZeeGraph
 				else if ( brush is LinearGradientBrush )
 				{
 					LinearGradientBrush linBrush = (LinearGradientBrush) brush.Clone();
-					
+
 					if ( isScaled )
 					{
 						linBrush.ScaleTransform( rect.Width / linBrush.Rectangle.Width,
@@ -1015,7 +1015,7 @@ namespace ZeeGraph
 							dx = ( rect.Left + rect.Width ) - linBrush.Rectangle.Left;
 							break;
 						}
-						
+
 						switch ( _alignV )
 						{
 						case AlignV.Top:
@@ -1031,14 +1031,14 @@ namespace ZeeGraph
 
 						linBrush.TranslateTransform( dx, dy, MatrixOrder.Append );
 					}
-					
+
 					return linBrush;
-					
+
 				} // LinearGradientBrush
 				else if ( brush is TextureBrush )
 				{
 					TextureBrush texBrush = (TextureBrush) brush.Clone();
-					
+
 					if ( isScaled )
 					{
 						texBrush.ScaleTransform( rect.Width / texBrush.Image.Width,
@@ -1061,7 +1061,7 @@ namespace ZeeGraph
 							dx = ( rect.Left + rect.Width );
 							break;
 						}
-						
+
 						switch ( _alignV )
 						{
 						case AlignV.Top:
@@ -1077,7 +1077,7 @@ namespace ZeeGraph
 
 						texBrush.TranslateTransform( dx, dy, MatrixOrder.Append );
 					}
-					
+
 					return texBrush;
 				}
 				else // other brush type

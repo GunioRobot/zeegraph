@@ -28,7 +28,7 @@ namespace ZedGraph
 	/// <summary>
 	/// internal class to store pane layout details for the <see cref="MasterPane" />
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.1 $ $Date: 2006/06/24 20:26:44 $ </version>
 	[Serializable]
@@ -62,7 +62,7 @@ namespace ZedGraph
 		/// private field that stores the row/column size proportional values as specified
 		/// to the <see cref="SetLayout(bool,int[],float[])"/> method.  This
 		/// value will be null if <see cref="SetLayout(bool,int[],float[])"/>
-		/// was never called.  
+		/// was never called.
 		/// </summary>
 		internal float[] _prop;
 

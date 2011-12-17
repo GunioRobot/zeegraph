@@ -31,7 +31,7 @@ namespace ZeeGraph
 	/// the graph.  A list of
 	/// BoxObj objects is maintained by the <see cref="GraphObjList"/> collection class.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.3 $ $Date: 2007/01/25 07:56:08 $ </version>
 	[Serializable]
@@ -100,7 +100,7 @@ namespace ZeeGraph
 			set { _border = value; }
 		}
 	#endregion
-	
+
 	#region Constructors
 		/// <overloads>Constructors for the <see cref="BoxObj"/> object</overloads>
 		/// <summary>
@@ -248,7 +248,7 @@ namespace ZeeGraph
 			info.AddValue( "border", _border );
 		}
 	#endregion
-	
+
 	#region Rendering Methods
 		/// <summary>
 		/// Render this object to the specified <see cref="Graphics"/> device.
@@ -289,12 +289,12 @@ namespace ZeeGraph
 			{
 				// If the box is to be filled, fill it
 				_fill.Draw( g, pixRect );
-				
+
 				// Draw the border around the box if required
 				_border.Draw( g, pane, scaleFactor, pixRect );
 			}
 		}
-		
+
 		/// <summary>
 		/// Determine if the specified screen point lies inside the bounding box of this
 		/// <see cref="BoxObj"/>.
@@ -343,6 +343,6 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	}
 }

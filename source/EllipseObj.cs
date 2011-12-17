@@ -33,7 +33,7 @@ namespace ZeeGraph
 	/// as the ellipse that would be contained by the rectangular box as
 	/// defined by the <see cref="Location"/> property.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.3 $ $Date: 2007/01/25 07:56:08 $ </version>
 	[Serializable]
@@ -57,7 +57,7 @@ namespace ZeeGraph
 			: base( x, y, width, height )
 		{
 		}
-		
+
 		/// <summary>
 		/// A default constructor that places the <see cref="EllipseObj"/> at location (0,0),
 		/// with width/height of (1,1).  Other properties are defaulted.
@@ -65,7 +65,7 @@ namespace ZeeGraph
 		public EllipseObj() : base()
 		{
 		}
-		
+
 		/// <summary>
 		/// A constructor that allows the position, border color, and solid fill color
 		/// of the <see cref="EllipseObj"/> to be pre-specified.
@@ -173,7 +173,7 @@ namespace ZeeGraph
 			info.AddValue( "schema3", schema3 );
 		}
 	#endregion
-	
+
 	#region Rendering Methods
 		/// <summary>
 		/// Render this object to the specified <see cref="Graphics"/> device.
@@ -216,7 +216,7 @@ namespace ZeeGraph
 						g.DrawEllipse( pen, pixRect );
 			}
 		}
-		
+
 		/// <summary>
 		/// Determine if the specified screen point lies inside the bounding box of this
 		/// <see cref="BoxObj"/>.
@@ -252,8 +252,8 @@ namespace ZeeGraph
 				return path.IsVisible( pt );
 			}
 		}
-		
+
 	#endregion
-	
+
 	}
 }

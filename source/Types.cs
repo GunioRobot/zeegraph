@@ -23,7 +23,7 @@ using System.Drawing.Drawing2D;
 
 
 namespace ZeeGraph
-{	
+{
 	/// <summary>
 	/// Enumeration type for the various axis types that are available
 	/// </summary>
@@ -179,7 +179,7 @@ namespace ZeeGraph
 	/// Enumeration type for the various symbol shapes that are available
 	/// </summary>
 	/// <seealso cref="Symbol.Fill"/>
-	public enum SymbolType 
+	public enum SymbolType
 	{
 		/// <summary> Square-shaped <see cref="Symbol"/> </summary>
 		Square,
@@ -248,12 +248,12 @@ namespace ZeeGraph
 		Bottom,
 		/// <summary>
 		/// Locate the <see cref="Legend"/> inside the <see cref="Chart.Rect"/> in the
-		/// top-left corner.  
+		/// top-left corner.
 		/// </summary>
 		InsideTopLeft,
 		/// <summary>
 		/// Locate the <see cref="Legend"/> inside the <see cref="Chart.Rect"/> in the
-		/// top-right corner. 
+		/// top-right corner.
 		/// </summary>
 		InsideTopRight,
 		/// <summary>
@@ -263,7 +263,7 @@ namespace ZeeGraph
 		InsideBotLeft,
 		/// <summary>
 		/// Locate the <see cref="Legend"/> inside the <see cref="Chart.Rect"/> in the
-		/// bottom-right corner. 
+		/// bottom-right corner.
 		/// </summary>
 		InsideBotRight,
 		/// <summary>
@@ -317,7 +317,7 @@ namespace ZeeGraph
 		/// </summary>
 		Right
 	}
-	
+
 	/// <summary>
 	/// Enumeration type for the different proximal alignment options
 	/// </summary>
@@ -347,7 +347,7 @@ namespace ZeeGraph
 		/// </summary>
 		Outside
 	}
-	
+
 	/// <summary>
 	/// Enumeration type for the different vertical text alignment options
 	/// </summary>
@@ -488,7 +488,7 @@ namespace ZeeGraph
 		XChartFractionY2Scale
 
 	}
-	
+
 	/// <summary>
 	/// Enumeration type that defines how a curve is drawn.  Curves can be drawn
 	/// as ordinary lines by connecting the points directly, or in a stair-step
@@ -532,7 +532,7 @@ namespace ZeeGraph
 		/// </summary>
 		RearwardSegment
 	}
-	
+
 	/// <summary>
 	/// Enumeration type that defines the base axis from which <see cref="Bar"/> graphs
 	/// are displayed. The bars can be drawn on any of the four axes (<see cref="XAxis"/>,
@@ -558,7 +558,7 @@ namespace ZeeGraph
 		/// </summary>
 		Y2
 	}
-	
+
 	/// <summary>
 	/// Enumeration type that defines the available types of <see cref="LineItem"/> graphs.
 	/// </summary>
@@ -574,7 +574,7 @@ namespace ZeeGraph
 		/// </summary>
 		Stack
 	}
-	
+
 	/// <summary>
 	/// Enumeration type that defines the available types of <see cref="BarItem"/> graphs.
 	/// </summary>
@@ -619,13 +619,13 @@ namespace ZeeGraph
 		/// <summary>
 		/// Draw the <see cref="BarItem"/> bars in a format whereby the height of each
 		/// represents the percentage of the total each one represents.  Negative values
-		///are displayed below the zero line as percentages of the absolute total of all values. 
+		///are displayed below the zero line as percentages of the absolute total of all values.
 		/// </summary>
-		PercentStack 
+		PercentStack
 	}
-	
+
 	/// <summary>
-	/// Enumeration type that defines which set of data points - X or Y - is used  
+	/// Enumeration type that defines which set of data points - X or Y - is used
 	/// <seealso cref="System.Collections.ArrayList.Sort()"/> to perform the sort.
 	/// </summary>
 	public enum SortType
@@ -738,13 +738,13 @@ namespace ZeeGraph
 		/// Displays <see cref="CurveItem.Label"/> and <see cref="PieItem.Value"/> (as % of total) for
 		/// a slice in a Pie Chart.
 		/// </summary>
-		Name_Percent,		
+		Name_Percent,
 
 		/// <summary>
-		/// Displays a <see cref="CurveItem.Label"/> containing the <see cref="PieItem.Value"/> both  
+		/// Displays a <see cref="CurveItem.Label"/> containing the <see cref="PieItem.Value"/> both
 		/// as an absolute number and as percentage of the total.
 		/// </summary>
-		Name_Value_Percent,		
+		Name_Value_Percent,
 
 		/// <summary>
 		/// Displays <see cref="PieItem.Value"/> for
@@ -764,11 +764,11 @@ namespace ZeeGraph
 		Name,
 
 		/// <summary>
-		///No label displayed. 
+		///No label displayed.
 		/// </summary>
 		None
 	}
-	
+
 	/// <summary>
 	/// Define the auto layout options for the
 	/// <see cref="MasterPane.SetLayout(Graphics,PaneLayout)"/> method.

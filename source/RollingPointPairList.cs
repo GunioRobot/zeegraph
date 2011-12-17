@@ -26,19 +26,19 @@ namespace ZeeGraph
 {
 	/// <summary>
 	/// A class that provides a rolling list of <see cref="PointPair" /> objects.
-	/// This is essentially a 
-	/// first-in-first-out (FIFO) queue with a fixed capacity which allows 'rolling' 
+	/// This is essentially a
+	/// first-in-first-out (FIFO) queue with a fixed capacity which allows 'rolling'
 	/// (or oscilloscope like) graphs to be be animated without having the overhead of an
 	/// ever-growing ArrayList.
-	/// 
-	/// The queue is constructed with a fixed capacity and new points can be enqueued. When the 
-	/// capacity is reached the oldest (first in) PointPair is overwritten. However, when 
+	///
+	/// The queue is constructed with a fixed capacity and new points can be enqueued. When the
+	/// capacity is reached the oldest (first in) PointPair is overwritten. However, when
 	/// accessing via <see cref="IPointList" />, the <see cref="PointPair" /> objects are
 	/// seen in the order in which they were enqeued.
 	///
 	/// RollingPointPairList supports data editing through the <see cref="IPointListEdit" />
 	/// interface.
-	/// 
+	///
 	/// <author>Colin Green with mods by John Champion</author>
 	/// <version> $Date: 2007/11/05 04:33:26 $ </version>
 	/// </summary>
@@ -286,7 +286,7 @@ namespace ZeeGraph
 		/// Remove an old item from the tail of the queue.
 		/// </summary>
 		/// <returns>The removed item. Throws an <see cref="InvalidOperationException" />
-		/// if the buffer was empty. 
+		/// if the buffer was empty.
 		/// Check the buffer's length (<see cref="Count" />) or the <see cref="IsEmpty" />
 		/// property to avoid exceptions.</returns>
 		public PointPair Remove()
@@ -610,7 +610,7 @@ namespace ZeeGraph
 		}
 
 	#endregion
-		
+
 	#region Serialization
 
 		/// <summary>

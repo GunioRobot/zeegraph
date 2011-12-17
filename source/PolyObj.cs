@@ -31,7 +31,7 @@ namespace ZeeGraph
 	/// the graph.  A list of <see cref="PolyObj"/> objects is maintained by
 	/// the <see cref="GraphObjList"/> collection class.
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.4 $ $Date: 2007/01/25 07:56:09 $ </version>
 	[Serializable]
@@ -84,7 +84,7 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	#region Constructors
 		/// <overloads>Constructors for the <see cref="PolyObj"/> object</overloads>
 		/// <summary>
@@ -219,7 +219,7 @@ namespace ZeeGraph
 			info.AddValue( "isClosedFigure", _isClosedFigure );
 		}
 	#endregion
-	
+
 	#region Rendering Methods
 		/// <summary>
 		/// Render this object to the specified <see cref="Graphics"/> device.
@@ -263,7 +263,7 @@ namespace ZeeGraph
 				}
 			}
 		}
-		
+
 		internal GraphicsPath MakePath( PaneBase pane )
 		{
 			GraphicsPath path = new GraphicsPath();
@@ -329,8 +329,8 @@ namespace ZeeGraph
 			else
 				return false;
 		}
-		
+
 	#endregion
-	
+
 	}
 }

@@ -176,7 +176,7 @@ namespace ZeeGraph
 		/// </summary>
 		/// <remarks>
 		/// This is the distance, in points (1/72 inch), of the dash segments that make up
-		/// the dashed grid lines.  This setting is only valid if 
+		/// the dashed grid lines.  This setting is only valid if
 		/// <see cref="Style" /> is set to <see cref="DashStyle.Custom" />.
 		/// </remarks>
 		/// <value>The dash on length is defined in points (1/72 inch)</value>
@@ -193,7 +193,7 @@ namespace ZeeGraph
 		/// </summary>
 		/// <remarks>
 		/// This is the distance, in points (1/72 inch), of the spaces between the dash
-		/// segments that make up the dashed grid lines.  This setting is only valid if 
+		/// segments that make up the dashed grid lines.  This setting is only valid if
 		/// <see cref="Style" /> is set to <see cref="DashStyle.Custom" />.
 		/// </remarks>
 		/// <value>The dash off length is defined in points (1/72 inch)</value>

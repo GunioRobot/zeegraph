@@ -2059,7 +2059,7 @@ namespace ZeeGraph.Web
 	/// <summary>
 	/// Web control state management class for a <see cref="XAxis"/> object
 	/// </summary>
-	/// <author>Darren Martz</author>	
+	/// <author>Darren Martz</author>
 	public class ZeeGraphWebXAxis : ZeeGraphWebAxis
 	{
 		/// <summary>
@@ -2088,7 +2088,7 @@ namespace ZeeGraph.Web
 	/// <summary>
 	/// Web control state management class for a <see cref="YAxis"/> object
 	/// </summary>
-	/// <author>Darren Martz</author>	
+	/// <author>Darren Martz</author>
 	public class ZeeGraphWebYAxis : ZeeGraphWebAxis
 	{
 		/// <summary>
@@ -2119,7 +2119,7 @@ namespace ZeeGraph.Web
 	/// <summary>
 	/// Web control state management class for a <see cref="Y2Axis"/> object
 	/// </summary>
-	/// <author>Darren Martz</author>	
+	/// <author>Darren Martz</author>
 	public class ZeeGraphWebY2Axis : ZeeGraphWebAxis
 	{
 		/// <summary>
@@ -2983,7 +2983,7 @@ namespace ZeeGraph.Web
 	/// <summary>
 	/// Web control state management class for a <see cref="Axis"/> object
 	/// </summary>
-	/// <author>Darren Martz</author>	
+	/// <author>Darren Martz</author>
 	public class ZeeGraphWebAxis : GenericItem
 	{
 		/// <summary>

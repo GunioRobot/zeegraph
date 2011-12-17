@@ -28,7 +28,7 @@ namespace ZeeGraph
 	/// <summary>
 	/// Class that handles the global settings for bar charts
 	/// </summary>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.5 $ $Date: 2007/11/03 04:41:28 $ </version>
 	[Serializable]
@@ -461,7 +461,7 @@ namespace ZeeGraph
 			public static BarType Type = BarType.Cluster;
 
 			/// <summary>
-			/// The default width of a bar cluster 
+			/// The default width of a bar cluster
 			/// on a <see cref="Bar"/> graph.  This value only applies to
 			/// <see cref="Bar"/> graphs, and only when the
 			/// <see cref="Axis.Type"/> is <see cref="AxisType.Linear"/>,

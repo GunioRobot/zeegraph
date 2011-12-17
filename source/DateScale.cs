@@ -35,7 +35,7 @@ namespace ZeeGraph
 	/// be created with the <see cref="XDate" /> type, which is directly translatable to a
 	/// <see cref="System.Double" /> type for storage in the point value arrays.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.15 $ $Date: 2007/09/19 06:41:56 $ </version>
 	[Serializable]
@@ -330,7 +330,7 @@ namespace ZeeGraph
 				return xlDate;
 			}
 		}
-		
+
 		/// <summary>
 		/// Internal routine to determine the ordinals of the first and last major axis label.
 		/// </summary>

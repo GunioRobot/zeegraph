@@ -234,7 +234,7 @@ namespace ZeeGraph.Web
 
 	#region Generic Data Schema
 	/// <summary>
-	/// Identifies state management items by a unique code and its datatype. The code is defined 
+	/// Identifies state management items by a unique code and its datatype. The code is defined
 	/// in the implementation of a GenericCollection class constructor.
 	/// </summary>
 	/// <author>Darren Martz</author>
@@ -276,9 +276,9 @@ namespace ZeeGraph.Web
 	///		[NotifyParentProperty(true)]
 	///		public bool IsVisible
 	///		{
-	///			get 
-	///			{ 
-	///				object x = ViewState["IsVisible"]; 
+	///			get
+	///			{
+	///				object x = ViewState["IsVisible"];
 	///				return (null == x) ? true : (bool)x;
 	///			}
 	///			set { ViewState["IsLegendLabelVisible"] = value; }
@@ -328,7 +328,7 @@ namespace ZeeGraph.Web
 		}
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="code"></param>
 		/// <param name="type"></param>
@@ -349,7 +349,7 @@ namespace ZeeGraph.Web
 		}
 
 		/// <summary>
-		/// 
+		///
 		/// </summary>
 		/// <param name="code"></param>
 		/// <returns></returns>
@@ -563,8 +563,8 @@ namespace ZeeGraph.Web
 	///		{
 	///			if ( null != item ) ListAdd( item );
 	///			else throw new ArgumentException("parameter cannot be null","item");
-	///		}	
-	///		
+	///		}
+	///
 	///		[NotifyParentProperty(true)]
 	///		public ZeeGraphWebCurveItem this [int index]
 	///		{
@@ -788,7 +788,7 @@ namespace ZeeGraph.Web
 		/// </summary>
 		/// <param name="item">item to locate in list</param>
 		/// <returns>index of item</returns>
-		/// <exception cref="ArgumentNullException"></exception>		
+		/// <exception cref="ArgumentNullException"></exception>
 		protected int IndexOf( object item )
 		{
 			if ( item == null )
@@ -801,7 +801,7 @@ namespace ZeeGraph.Web
 
 		#region IEnumerable Implementation
 		/// <summary>
-		/// <see cref="System.Collections.IEnumerable.GetEnumerator"/> 
+		/// <see cref="System.Collections.IEnumerable.GetEnumerator"/>
 		/// </summary>
 		/// <returns></returns>
 		public IEnumerator GetEnumerator()
@@ -852,7 +852,7 @@ namespace ZeeGraph.Web
 		}
 
 		/// <summary>
-		/// <see cref="ICollection.SyncRoot"/>		
+		/// <see cref="ICollection.SyncRoot"/>
 		/// </summary>
 		[
 		Browsable( false ),
@@ -870,11 +870,11 @@ namespace ZeeGraph.Web
 		#region IList Implementation
 
 		/// <summary>
-		/// Privately implement those members of IList that take or 
+		/// Privately implement those members of IList that take or
 		/// return the object type and expose equivalent public members
 		/// that take or return an item instance instead. Also
 		/// implement privately those members of IList that are not meaninful
-		/// to expose in the public object model of this Collection.		
+		/// to expose in the public object model of this Collection.
 		/// </summary>
 		object IList.this[int index]
 		{

@@ -46,7 +46,7 @@ namespace ZeeGraph
 	/// of the graph.  You can have multiple graphs in the same document or form,
 	/// just instantiate multiple GraphPane's.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion modified by Jerry Vos </author>
 	/// <version> $Revision: 3.81 $ $Date: 2007/09/30 07:44:11 $ </version>
 	[Serializable]
@@ -174,7 +174,7 @@ namespace ZeeGraph
 			/// <seealso cref="GraphPane.LineType"/>
 			public static LineType LineType = LineType.Normal;
 			/// <summary>
-			/// The default width of a bar cluster 
+			/// The default width of a bar cluster
 			/// on a <see cref="Bar"/> graph.  This value only applies to
 			/// <see cref="Bar"/> graphs, and only when the
 			/// <see cref="Axis.Type"/> is <see cref="AxisType.Linear"/>,
@@ -322,7 +322,7 @@ namespace ZeeGraph
 			get { return _isIgnoreMissing; }
 			set { _isIgnoreMissing = value; }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets a value that determines if ZedGraph should modify the scale ranges
 		/// for the Y and Y2 axes such that the number of major steps, and therefore the
@@ -1447,7 +1447,7 @@ namespace ZeeGraph
 		/// </summary>
 		/// <param name="value">The value associated with this <see cref="PieItem"/>item.</param>
 		/// <param name="color">The display color for this <see cref="PieItem"/>item.</param>
-		/// <param name="displacement">The amount this <see cref="PieItem"/>item will be 
+		/// <param name="displacement">The amount this <see cref="PieItem"/>item will be
 		/// displaced from the center of the <see cref="PieItem"/>.</param>
 		/// <param name="label">Text label for this <see cref="PieItem"/></param>
 		/// <returns>a reference to the <see cref="PieItem"/> constructed</returns>
@@ -1467,7 +1467,7 @@ namespace ZeeGraph
 		/// <param name="color2">The ending display color for the gradient <see cref="Fill"/> for this
 		/// <see cref="PieItem"/> instance.</param>
 		/// <param name="fillAngle">The angle for the gradient <see cref="Fill"/>.</param>
-		/// <param name="displacement">The amount this <see cref="PieItem"/>  instance will be 
+		/// <param name="displacement">The amount this <see cref="PieItem"/>  instance will be
 		/// displaced from the center point.</param>
 		/// <param name="label">Text label for this <see cref="PieItem"/> instance.</param>
 		public PieItem AddPieSlice( double value, Color color1, Color color2, float fillAngle,
@@ -1479,7 +1479,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		///Creates all the <see cref="PieItem"/>s for a single Pie Chart. 
+		///Creates all the <see cref="PieItem"/>s for a single Pie Chart.
 		/// </summary>
 		/// <param name="values">double array containing all <see cref="PieItem.Value"/>s
 		/// for a single PieChart.
@@ -1793,7 +1793,7 @@ namespace ZeeGraph
 		/// index will be -1 if no data points are available.</param>
 		/// <returns>true if an object was found, false otherwise.</returns>
 		/// <seealso cref="FindNearestObject"/>
-		public bool FindNearestObject( PointF mousePt, Graphics g, 
+		public bool FindNearestObject( PointF mousePt, Graphics g,
 			out object nearestObj, out int index )
 		{
 			nearestObj = null;
@@ -2001,7 +2001,7 @@ namespace ZeeGraph
 		/// This method will search through the specified list of curves to find which point is
 		/// nearest.  It will only consider points that are within
 		/// <see cref="Default.NearestTol"/> pixels of the screen point, and it will
-		/// only consider <see cref="CurveItem"/>'s that are in 
+		/// only consider <see cref="CurveItem"/>'s that are in
 		/// <paramref name="targetCurveList"/>.
 		/// </remarks>
 		/// <param name="mousePt">The screen point, in pixel coordinates.</param>

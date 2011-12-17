@@ -485,7 +485,7 @@ namespace ZeeGraph.Web
 				ViewState["PaneCount"] = Math.Max( 1, value );
 			}
 		}
-		
+
 		/// <summary>
 		/// The layout format for the compound graph.
 		/// </summary>
@@ -1416,11 +1416,11 @@ namespace ZeeGraph.Web
 			mp.Add( new GraphPane( rect, Title, string.Empty, string.Empty ) );
 			//}
 
-			// create output bitmap container						
+			// create output bitmap container
 			Bitmap image = new Bitmap( this.Width, this.Height );
 			using ( Graphics g = Graphics.FromImage( image ) )
 			{
-				// Apply layout plan				
+				// Apply layout plan
 				//mp.SetLayout( this.PaneLayout );
 				mp.ReSize( g, rect );
 
@@ -1452,7 +1452,7 @@ namespace ZeeGraph.Web
 				mp.Draw( g );
 			}
 
-			// Stream the graph out				
+			// Stream the graph out
 			MemoryStream ms = new MemoryStream();
 			image.Save( ms, Format );
 

@@ -37,7 +37,7 @@ namespace ZeeGraph
 	/// <see cref="DateAsOrdinalScale"/>, and <see cref="LinearAsOrdinalScale"/>
 	/// classes to define specific characteristics for those types.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion  </author>
 	/// <version> $Revision: 1.33 $ $Date: 2007/09/19 06:41:56 $ </version>
 	[Serializable]
@@ -59,7 +59,7 @@ namespace ZeeGraph
 
 		/// <summary> Private fields for the <see cref="Axis"/> automatic scaling modes.
 		/// Use the public properties <see cref="MinAuto"/>, <see cref="MaxAuto"/>,
-		/// <see cref="MajorStepAuto"/>, <see cref="MinorStepAuto"/>, 
+		/// <see cref="MajorStepAuto"/>, <see cref="MinorStepAuto"/>,
 		/// <see cref="MagAuto"/> and <see cref="FormatAuto"/>
 		/// for access to these values.
 		/// </summary>
@@ -160,7 +160,7 @@ namespace ZeeGraph
 		/// </summary>
 		internal float _minPix,
 							_maxPix;
-	
+
 		/// <summary>
 		/// Scale values for calculating transforms.  These are temporary values
 		/// used ONLY during the Draw process.
@@ -404,7 +404,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Year"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Year"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Year"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -415,7 +415,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Year"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Month"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Month"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -426,7 +426,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Month"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Month"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Month"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -437,7 +437,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Day"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Day"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Day"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -448,7 +448,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Day"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Hour"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Hour"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -459,7 +459,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Hour"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Hour"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Hour"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -470,7 +470,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Hour"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Minute"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Minute"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -481,7 +481,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Minute"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Minute"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Minute"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -492,7 +492,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Minute"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Second"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Second"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -503,7 +503,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Second"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Second"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Second"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -514,7 +514,7 @@ namespace ZeeGraph
 			/// This values applies only to Date-Time type axes.
 			/// This is the format used for the scale values when auto-ranging code
 			/// selects a <see cref="Format"/> of <see cref="DateUnit.Millisecond"/>
-			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Millisecond"/> for 
+			/// for <see cref="MajorUnit"/> and <see cref="DateUnit.Millisecond"/> for
 			/// for <see cref="MinorUnit"/>.
 			/// This value is used by the <see cref="DateScale.CalcDateStepSize"/> method.
 			/// </summary>
@@ -834,7 +834,7 @@ namespace ZeeGraph
 			_minorStepAuto = info.GetBoolean( "minorStepAuto" );
 			_magAuto = info.GetBoolean( "magAuto" );
 			_formatAuto = info.GetBoolean( "formatAuto" );
-			
+
 			_minGrace = info.GetDouble( "minGrace" );
 			_maxGrace = info.GetDouble( "maxGrace" );
 
@@ -1101,7 +1101,7 @@ namespace ZeeGraph
 			}
 		}
 		/// <summary>
-		/// Gets or sets the scale exponent value.  This only applies to <see cref="AxisType.Exponent" />. 
+		/// Gets or sets the scale exponent value.  This only applies to <see cref="AxisType.Exponent" />.
 		/// </summary>
 		/// <seealso cref="Min"/>
 		/// <seealso cref="Max"/>
@@ -2801,7 +2801,7 @@ namespace ZeeGraph
 
 		///<summary>
 		///Calculate an exponential in a safe manner to avoid math exceptions
-		///</summary> 
+		///</summary>
 		/// <param name="x">The value for which the exponential is to be calculated</param>
 		/// <param name="exponent">The exponent value to use for calculating the exponential.</param>
 		public static double SafeExp( double x, double exponent )

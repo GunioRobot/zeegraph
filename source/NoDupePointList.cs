@@ -50,7 +50,7 @@ namespace ZeeGraph
 	/// Note that this type probably does not make sense for line plots, but is intended
 	/// primarily for scatter plots.
 	/// </remarks>
-	/// 
+	///
 	/// <author> John Champion </author>
 	/// <version> $Revision: 3.5 $ $Date: 2007/06/02 06:56:03 $ </version>
 	[Serializable]
@@ -294,12 +294,12 @@ namespace ZeeGraph
 		/// <param name="pane">The <see cref="GraphPane" /> into which the data
 		/// will be plotted. </param>
 		/// <param name="yAxis">The <see cref="Axis" /> class to be used in the Y direction
-		/// for plotting these data.  This can be a <see cref="YAxis" /> or a 
+		/// for plotting these data.  This can be a <see cref="YAxis" /> or a
 		/// <see cref="Y2Axis" />, and can be a primary or secondary axis (if multiple Y or Y2
 		/// axes are being used).
 		/// </param>
 		/// <param name="xAxis">The <see cref="Axis" /> class to be used in the X direction
-		/// for plotting these data.  This can be an <see cref="XAxis" /> or a 
+		/// for plotting these data.  This can be an <see cref="XAxis" /> or a
 		/// <see cref="X2Axis" />.
 		/// </param>
 		public void FilterData( GraphPane pane, Axis xAxis, Axis yAxis )

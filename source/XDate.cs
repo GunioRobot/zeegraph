@@ -21,7 +21,7 @@ using System;
 
 namespace ZeeGraph
 {
-	
+
 	/// <summary>
 	/// This struct encapsulates a date and time value, and handles associated
 	/// calculations and conversions between various formats.
@@ -49,13 +49,13 @@ namespace ZeeGraph
 		// =========================================================================
 		// Internal Variables
 		// =========================================================================
-	
+
 		/// <summary>
 		/// The actual date value in MS Excel format.  This is the only data field in
 		/// the <see cref="XDate"/> struct.
 		/// </summary>
 		private double _xlDate;
-		
+
 		/// <summary>
 		/// The Astronomical Julian Day number that corresponds to XL Date 0.0
 		/// </summary>
@@ -117,7 +117,7 @@ namespace ZeeGraph
 //		public const string DefaultFormatStr = "&d-&mmm-&yy &hh:&nn";
 		public const string DefaultFormatStr = "g";
 	#endregion
-	
+
 	#region Constructors
 		// =========================================================================
 		// Constructors
@@ -133,7 +133,7 @@ namespace ZeeGraph
 		{
 			_xlDate = xlDate;
 		}
-		
+
 		/// <summary>
 		/// Construct a date class from a <see cref="DateTime"/> struct.
 		/// </summary>
@@ -146,7 +146,7 @@ namespace ZeeGraph
 							dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second,
 							dateTime.Millisecond );
 		}
-		
+
 		/// <summary>
 		/// Construct a date class from a calendar date (year, month, day).  Assumes the time
 		/// of day is 00:00 hrs
@@ -162,10 +162,10 @@ namespace ZeeGraph
 		{
 			_xlDate = CalendarDateToXLDate( year, month, day, 0, 0, 0 );
 		}
-		
+
 		/// <summary>
 		/// Construct a date class from a calendar date and time (year, month, day, hour, minute,
-		/// second). 
+		/// second).
 		/// </summary>
 		/// <param name="year">An integer value for the year, e.g., 1995.</param>
 		/// <param name="day">An integer value for the day of the month, e.g., 23.
@@ -187,10 +187,10 @@ namespace ZeeGraph
 		{
 			_xlDate = CalendarDateToXLDate( year, month, day, hour, minute, second );
 		}
-		
+
 		/// <summary>
 		/// Construct a date class from a calendar date and time (year, month, day, hour, minute,
-		/// second), where seconds is a <see cref="System.Double" /> value (allowing fractional seconds). 
+		/// second), where seconds is a <see cref="System.Double" /> value (allowing fractional seconds).
 		/// </summary>
 		/// <param name="year">An integer value for the year, e.g., 1995.</param>
 		/// <param name="day">An integer value for the day of the month, e.g., 23.
@@ -212,10 +212,10 @@ namespace ZeeGraph
 		{
 			_xlDate = CalendarDateToXLDate( year, month, day, hour, minute, second );
 		}
-		
+
 		/// <summary>
 		/// Construct a date class from a calendar date and time (year, month, day, hour, minute,
-		/// second, millisecond). 
+		/// second, millisecond).
 		/// </summary>
 		/// <param name="year">An integer value for the year, e.g., 1995.</param>
 		/// <param name="day">An integer value for the day of the month, e.g., 23.
@@ -240,7 +240,7 @@ namespace ZeeGraph
 		{
 			_xlDate = CalendarDateToXLDate( year, month, day, hour, minute, second, millisecond );
 		}
-		
+
 		/// <summary>
 		/// The Copy Constructor
 		/// </summary>
@@ -271,12 +271,12 @@ namespace ZeeGraph
 */
 
 	#endregion
-	
+
 	#region Properties
 		// =========================================================================
 		// Properties
 		// =========================================================================
-	
+
 		/// <summary>
 		/// Gets or sets the date value for this item in MS Excel format.
 		/// </summary>
@@ -293,7 +293,7 @@ namespace ZeeGraph
 		{
 			get { return _xlDate >= XLDayMin && _xlDate <= XLDayMax; }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets the date value for this item in .Net DateTime format.
 		/// </summary>
@@ -302,7 +302,7 @@ namespace ZeeGraph
 			get { return XLDateToDateTime( _xlDate ); }
 			set { _xlDate = DateTimeToXLDate( value ); }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets the date value for this item in Julain day format.  This is the
 		/// Astronomical Julian Day number, so a value of 0.0 corresponds to noon GMT on
@@ -314,7 +314,7 @@ namespace ZeeGraph
 			get { return XLDateToJulianDay( _xlDate ); }
 			set { _xlDate = JulianDayToXLDate( value ); }
 		}
-		
+
 		/// <summary>
 		/// Gets or sets the decimal year number (i.e., 1997.345) corresponding to this item.
 		/// </summary>
@@ -324,7 +324,7 @@ namespace ZeeGraph
 			set { _xlDate = DecimalYearToXLDate( value ); }
 		}
 	#endregion
-	
+
 	#region Get/Set Date Methods
 
 		/// <summary>
@@ -362,10 +362,10 @@ namespace ZeeGraph
 		public void GetDate( out int year, out int month, out int day )
 		{
 			int hour, minute, second;
-			
+
 			XLDateToCalendarDate( _xlDate, out year, out month, out day, out hour, out minute, out second );
 		}
-		
+
 		/// <summary>
 		/// Set the calendar date (year, month, day) of this instance.
 		/// </summary>
@@ -377,7 +377,7 @@ namespace ZeeGraph
 		{
 			_xlDate = CalendarDateToXLDate( year, month, day, 0, 0, 0 );
 		}
-		
+
 		/// <summary>
 		/// Get the calendar date (year, month, day, hour, minute, second) corresponding
 		/// to this instance.
@@ -409,7 +409,7 @@ namespace ZeeGraph
 		{
 			_xlDate = CalendarDateToXLDate( year, month, day, hour, minute, second );
 		}
-		
+
 		/// <summary>
 		/// Get the day of year value (241.345 means the 241st day of the year)
 		/// corresponding to this instance.
@@ -420,12 +420,12 @@ namespace ZeeGraph
 			return XLDateToDayOfYear( _xlDate );
 		}
 	#endregion
-	
+
 	#region Date Conversion Methods
 		// =========================================================================
 		// Conversion Routines
 		// =========================================================================
-	
+
 		/// <summary>
 		/// Calculate an XL Date from the specified Calendar date (year, month, day, hour, minute, second),
 		/// first normalizing all input data values.
@@ -472,10 +472,10 @@ namespace ZeeGraph
 			double ms = millisecond;
 			NormalizeCalendarDate( ref year, ref month, ref day, ref hour, ref minute, ref second,
 						ref ms );
-		
+
 			return _CalendarDateToXLDate( year, month, day, hour, minute, second, ms );
 		}
-		
+
 		/// <summary>
 		/// Calculate an XL Date from the specified Calendar date (year, month, day, hour, minute, second),
 		/// first normalizing all input data values.
@@ -518,10 +518,10 @@ namespace ZeeGraph
 			double ms = 0;
 			NormalizeCalendarDate( ref year, ref month, ref day, ref hour, ref minute,
 					ref second, ref ms );
-		
+
 			return _CalendarDateToXLDate( year, month, day, hour, minute, second, ms );
 		}
-		
+
 		/// <summary>
 		/// Calculate an XL Date from the specified Calendar date (year, month, day, hour, minute, second),
 		/// first normalizing all input data values.  The seconds value is a double type, allowing fractional
@@ -566,10 +566,10 @@ namespace ZeeGraph
 			double ms = ( second - sec ) * MillisecondsPerSecond;
 			NormalizeCalendarDate( ref year, ref month, ref day, ref hour, ref minute, ref sec,
 					ref ms );
-		
+
 			return _CalendarDateToXLDate( year, month, day, hour, minute, sec, ms );
 		}
-		
+
 		/// <summary>
 		/// Calculate an Astronomical Julian Day number from the specified Calendar date
 		/// (year, month, day, hour, minute, second), first normalizing all input data values
@@ -603,10 +603,10 @@ namespace ZeeGraph
 			double ms = 0;
 			NormalizeCalendarDate( ref year, ref month, ref day, ref hour, ref minute,
 				ref second, ref ms );
-		
+
 			return _CalendarDateToJulianDay( year, month, day, hour, minute, second, ms );
 		}
-		
+
 		/// <summary>
 		/// Calculate an Astronomical Julian Day number from the specified Calendar date
 		/// (year, month, day, hour, minute, second), first normalizing all input data values
@@ -644,10 +644,10 @@ namespace ZeeGraph
 
 			NormalizeCalendarDate( ref year, ref month, ref day, ref hour, ref minute,
 						ref second, ref ms );
-		
+
 			return _CalendarDateToJulianDay( year, month, day, hour, minute, second, ms );
 		}
-		
+
 		/// <summary>
 		/// Normalize a set of Calendar date values (year, month, day, hour, minute, second) to make sure
 		/// that month is between 1 and 12, hour is between 0 and 23, etc.
@@ -690,23 +690,23 @@ namespace ZeeGraph
 			carry = (int)Math.Floor( second / SecondsPerMinute );
 			second -= carry * (int)SecondsPerMinute;
 			minute += carry;
-		
+
 			// Normalize the minutes and carry over to hours
 			carry = (int) Math.Floor( (double) minute / MinutesPerHour );
 			minute -= carry * (int) MinutesPerHour;
 			hour += carry;
-		
+
 			// Normalize the hours and carry over to days
 			carry = (int) Math.Floor( (double) hour / HoursPerDay );
 			hour -= carry * (int) HoursPerDay;
 			day += carry;
-		
+
 			// Normalize the months and carry over to years
 			carry = (int) Math.Floor( (double) month / MonthsPerYear );
 			month -= carry * (int) MonthsPerYear;
 			year += carry;
 		}
-		
+
 		/// <summary>
 		/// Calculate an XL date from the specified Calendar date (year, month, day, hour, minute, second).
 		/// This is the internal trusted version, where all values are assumed to be legitimate
@@ -740,7 +740,7 @@ namespace ZeeGraph
 			return JulianDayToXLDate( _CalendarDateToJulianDay( year, month, day, hour, minute,
 						second, millisecond ) );
 		}
-		
+
 		/// <summary>
 		/// Calculate an Astronomical Julian Day Number from the specified Calendar date
 		/// (year, month, day, hour, minute, second).
@@ -775,22 +775,22 @@ namespace ZeeGraph
 		{
 			// Taken from http://www.srrb.noaa.gov/highlights/sunrise/program.txt
 			// routine calcJD()
-		
+
 			if ( month <= 2 )
 			{
 				year -= 1;
 				month += 12;
 			}
-		
+
 			double A = Math.Floor( (double) year / 100.0 );
 			double B = 2 - A + Math.Floor( A / 4.0 );
-		
+
 			return	Math.Floor( 365.25 * ( (double) year + 4716.0 ) ) +
 					Math.Floor( 30.6001 * (double) ( month + 1 ) ) +
 					(double) day + B - 1524.5 +
 					hour  / HoursPerDay + minute / MinutesPerDay + second / SecondsPerDay +
 					millisecond / MillisecondsPerDay;
-		
+
 		}
 
 		/// <summary>
@@ -822,11 +822,11 @@ namespace ZeeGraph
 			out int day, out int hour, out int minute, out int second )
 		{
 			double jDay = XLDateToJulianDay( xlDate );
-			
+
 			JulianDayToCalendarDate( jDay, out year, out month, out day, out hour,
 				out minute, out second );
 		}
-		
+
 		/// <summary>
 		/// Calculate a Calendar date (year, month, day, hour, minute, second) corresponding to
 		/// the specified XL date
@@ -859,13 +859,13 @@ namespace ZeeGraph
 			out int day, out int hour, out int minute, out int second, out int millisecond )
 		{
 			double jDay = XLDateToJulianDay( xlDate );
-			
+
 			double ms;
 			JulianDayToCalendarDate( jDay, out year, out month, out day, out hour,
 				out minute, out second, out ms );
 			millisecond = (int)ms;
 		}
-		
+
 		/// <summary>
 		/// Calculate a Calendar date (year, month, day, hour, minute, second) corresponding to
 		/// the specified XL date
@@ -895,11 +895,11 @@ namespace ZeeGraph
 			out int day, out int hour, out int minute, out double second )
 		{
 			double jDay = XLDateToJulianDay( xlDate );
-			
+
 			JulianDayToCalendarDate( jDay, out year, out month, out day, out hour,
 				out minute, out second );
 		}
-		
+
 		/// <summary>
 		/// Calculate a Calendar date (year, month, day, hour, minute, second) corresponding to
 		/// the Astronomical Julian Day number
@@ -1008,20 +1008,20 @@ namespace ZeeGraph
 
 			double z = Math.Floor( jDay + 0.5);
 			double f = jDay + 0.5 - z;
-		
+
 			double alpha = Math.Floor( ( z - 1867216.25 ) / 36524.25 );
 			double A = z + 1.0 + alpha - Math.Floor( alpha / 4 );
 			double B = A + 1524.0;
 			double C = Math.Floor( ( B - 122.1 ) / 365.25 );
 			double D = Math.Floor( 365.25 * C );
 			double E = Math.Floor( ( B - D ) / 30.6001 );
-		
+
 			day = (int) Math.Floor( B - D - Math.Floor( 30.6001 * E ) + f );
 			month = (int) ( ( E < 14.0 ) ? E - 1.0 : E - 13.0 );
 			year = (int) ( ( month > 2 ) ? C - 4716 : C - 4715 );
-		
+
 			double fday =  ( jDay - 0.5 ) - Math.Floor( jDay - 0.5 );
-		
+
 			fday = ( fday - (long) fday ) * HoursPerDay;
 			hour = (int) fday;
 			fday = ( fday - (long) fday ) * MinutesPerHour;
@@ -1031,7 +1031,7 @@ namespace ZeeGraph
 			fday = ( fday - (long) fday ) * MillisecondsPerSecond;
 			millisecond = fday;
 		}
-		
+
 		/// <summary>
 		/// Calculate an Astronomical Julian Day number corresponding to the specified XL date
 		/// </summary>
@@ -1044,7 +1044,7 @@ namespace ZeeGraph
 		{
 			return xlDate + XLDay1;
 		}
-		
+
 		/// <summary>
 		/// Calculate an XL Date corresponding to the specified Astronomical Julian Day number
 		/// </summary>
@@ -1057,7 +1057,7 @@ namespace ZeeGraph
 		{
 			return jDay - XLDay1;
 		}
-		
+
 		/// <summary>
 		/// Calculate a decimal year value (e.g., 1994.6523) corresponding to the specified XL date
 		/// </summary>
@@ -1069,17 +1069,17 @@ namespace ZeeGraph
 		public static double XLDateToDecimalYear( double xlDate )
 		{
 			int year, month, day, hour, minute, second;
-			
+
 			XLDateToCalendarDate( xlDate, out year, out month, out day, out hour, out minute, out second );
-			
+
 			double jDay1 = CalendarDateToJulianDay( year, 1, 1, 0, 0, 0 );
 			double jDay2 = CalendarDateToJulianDay( year + 1, 1, 1, 0, 0, 0 );
 			double jDayMid = CalendarDateToJulianDay( year, month, day, hour, minute, second );
-			
-			
+
+
 			return (double) year + ( jDayMid - jDay1 ) / ( jDay2 - jDay1 );
 		}
-		
+
 		/// <summary>
 		/// Calculate a decimal year value (e.g., 1994.6523) corresponding to the specified XL date
 		/// </summary>
@@ -1091,13 +1091,13 @@ namespace ZeeGraph
 		public static double DecimalYearToXLDate( double yearDec )
 		{
 			int year = (int) yearDec;
-			
+
 			double jDay1 = CalendarDateToJulianDay( year, 1, 1, 0, 0, 0 );
 			double jDay2 = CalendarDateToJulianDay( year + 1, 1, 1, 0, 0, 0 );
-			
+
 			return JulianDayToXLDate( ( yearDec - (double) year ) * ( jDay2 - jDay1 ) + jDay1 );
 		}
-		
+
 		/// <summary>
 		/// Calculate a day-of-year value (e.g., 241.543 corresponds to the 241st day of the year)
 		/// corresponding to the specified XL date
@@ -1114,7 +1114,7 @@ namespace ZeeGraph
 									out hour, out minute, out second );
 			return XLDateToJulianDay( xlDate ) - CalendarDateToJulianDay( year, 1, 1, 0, 0, 0 ) + 1.0;
 		}
-		
+
 		/// <summary>
 		/// Calculate a day-of-week value (e.g., Sun=0, Mon=1, Tue=2, etc.)
 		/// corresponding to the specified XL date
@@ -1127,7 +1127,7 @@ namespace ZeeGraph
 		{
 			return (int) ( XLDateToJulianDay( xlDate ) + 1.5 ) % 7;
 		}
-		
+
 		/// <summary>
 		/// Convert an XL date format to a .Net DateTime struct
 		/// </summary>
@@ -1144,7 +1144,7 @@ namespace ZeeGraph
 									out hour, out minute, out second, out millisecond );
 			return new DateTime( year, month, day, hour, minute, second, millisecond );
 		}
-		
+
 		/// <summary>
 		/// Convert a .Net DateTime struct to an XL Format date
 		/// </summary>
@@ -1159,7 +1159,7 @@ namespace ZeeGraph
 										dt.Millisecond );
 		}
 	#endregion
-	
+
 	#region Date Math Methods
 		// =========================================================================
 		// Math Routines
@@ -1197,7 +1197,7 @@ namespace ZeeGraph
 		{
 			_xlDate += dMinutes / MinutesPerDay;
 		}
-		
+
 		/// <summary>
 		/// Add the specified number of hours (can be fractional) to the current XDate instance.
 		/// </summary>
@@ -1208,7 +1208,7 @@ namespace ZeeGraph
 		{
 			_xlDate += dHours / HoursPerDay;
 		}
-		
+
 		/// <summary>
 		/// Add the specified number of days (can be fractional) to the current XDate instance.
 		/// </summary>
@@ -1219,7 +1219,7 @@ namespace ZeeGraph
 		{
 			_xlDate += dDays;
 		}
-		
+
 		/// <summary>
 		/// Add the specified number of Months (can be fractional) to the current XDate instance.
 		/// </summary>
@@ -1231,23 +1231,23 @@ namespace ZeeGraph
 			int iMon = (int) dMonths;
 			double monFrac = Math.Abs( dMonths - (double) iMon );
 			int sMon = Math.Sign( dMonths );
-			
+
 			int year, month, day, hour, minute, second;
-			
+
 			XLDateToCalendarDate( _xlDate, out year, out month, out day, out hour, out minute, out second );
 			if ( iMon != 0 )
 			{
 				month += iMon;
 				_xlDate = CalendarDateToXLDate( year, month, day, hour, minute, second );
 			}
-			
+
 			if ( sMon != 0 )
 			{
 				double xlDate2 = CalendarDateToXLDate( year, month+sMon, day, hour, minute, second );
 				_xlDate += (xlDate2 - _xlDate) * monFrac;
 			}
 		}
-		
+
 		/// <summary>
 		/// Add the specified number of years (can be fractional) to the current XDate instance.
 		/// </summary>
@@ -1259,16 +1259,16 @@ namespace ZeeGraph
 			int iYear = (int) dYears;
 			double yearFrac = Math.Abs( dYears - (double) iYear );
 			int sYear = Math.Sign( dYears );
-			
+
 			int year, month, day, hour, minute, second;
-			
+
 			XLDateToCalendarDate( _xlDate, out year, out month, out day, out hour, out minute, out second );
 			if ( iYear != 0 )
 			{
 				year += iYear;
 				_xlDate = CalendarDateToXLDate( year, month, day, hour, minute, second );
 			}
-			
+
 			if ( sYear != 0 )
 			{
 				double xlDate2 = CalendarDateToXLDate( year+sYear, month, day, hour, minute, second );
@@ -1276,12 +1276,12 @@ namespace ZeeGraph
 			}
 		}
 	#endregion
-	
+
 	#region Operator Overload Methods
 		// =========================================================================
 		// Operator Overloads
 		// =========================================================================
-	
+
 		/// <summary>
 		/// '-' operator overload.  When two XDates are subtracted, the number of days between dates
 		/// is returned.
@@ -1293,7 +1293,7 @@ namespace ZeeGraph
 		{
 			return lhs.XLDate - rhs.XLDate;
 		}
-		
+
 		/// <summary>
 		/// '-' operator overload.  When a double value is subtracted from an XDate, the result is a
 		/// new XDate with the number of days subtracted.
@@ -1306,7 +1306,7 @@ namespace ZeeGraph
 			lhs._xlDate -= rhs;
 			return lhs;
 		}
-		
+
 		/// <summary>
 		/// '+' operator overload.  When a double value is added to an XDate, the result is a
 		/// new XDate with the number of days added.
@@ -1319,7 +1319,7 @@ namespace ZeeGraph
 			lhs._xlDate += rhs;
 			return lhs;
 		}
-		
+
 		/// <summary>
 		/// '++' operator overload.  Increment the date by one day.
 		/// </summary>
@@ -1330,7 +1330,7 @@ namespace ZeeGraph
 			xDate._xlDate += 1.0;
 			return xDate;
 		}
-		
+
 		/// <summary>
 		/// '--' operator overload.  Decrement the date by one day.
 		/// </summary>
@@ -1341,7 +1341,7 @@ namespace ZeeGraph
 			xDate._xlDate -= 1.0;
 			return xDate;
 		}
-		
+
 		/// <summary>
 		/// Implicit conversion from XDate to double (an XL Date).
 		/// </summary>
@@ -1351,7 +1351,7 @@ namespace ZeeGraph
 		{
 			return xDate._xlDate;
 		}
-		
+
 		/// <summary>
 		/// Implicit conversion from XDate to float (an XL Date).
 		/// </summary>
@@ -1361,7 +1361,7 @@ namespace ZeeGraph
 		{
 			return (float) xDate._xlDate;
 		}
-		
+
 		/// <summary>
 		/// Implicit conversion from double (an XL Date) to XDate.
 		/// </summary>
@@ -1371,7 +1371,7 @@ namespace ZeeGraph
 		{
 			return new XDate( xlDate );
 		}
-		
+
 		/// <summary>
 		/// Implicit conversion from XDate to <see cref="DateTime"/>.
 		/// </summary>
@@ -1379,10 +1379,10 @@ namespace ZeeGraph
 		/// <returns>A <see cref="DateTime"/> struct representing the specified xDate value.</returns>
 		public static implicit operator DateTime( XDate xDate )
 		{
-			
+
 			return XLDateToDateTime( xDate );
 		}
-		
+
 		/// <summary>
 		/// Implicit conversion from <see cref="DateTime"/> to <see cref="XDate"/>.
 		/// </summary>
@@ -1390,11 +1390,11 @@ namespace ZeeGraph
 		/// <returns>An <see cref="XDate"/> struct representing the specified DateTime value.</returns>
 		public static implicit operator XDate( DateTime dt )
 		{
-			
+
 			return new XDate( DateTimeToXLDate( dt ) );
 		}
 	#endregion
-		
+
 	#region General Overrides
 		// =========================================================================
 		// System Stuff
@@ -1422,7 +1422,7 @@ namespace ZeeGraph
 			else
 				return false;
 		}
-		
+
 		/// <summary>
 		/// Returns the hash code for this <see cref="XDate"/> structure.  In this case, the
 		/// hash code is simply the equivalent hash code for the floating point double date value.
@@ -1453,12 +1453,12 @@ namespace ZeeGraph
 		}
 
 	#endregion
-	
+
 	#region String Format Conversion Methods
 		// =========================================================================
 		// String Formatting Routines
 		// =========================================================================
-	
+
 		/// <summary>
 		/// Format this XDate value using the default format string (<see cref="DefaultFormatStr"/>).
 		/// </summary>
@@ -1481,7 +1481,7 @@ namespace ZeeGraph
 		{
 			return ToString( xlDate, DefaultFormatStr );
 		}
-		
+
 		/// <summary>
 		/// Format this XDate value using the default format string (see cref="DefaultFormatStr"/>).
 		/// </summary>
@@ -1503,7 +1503,7 @@ namespace ZeeGraph
 		{
 			return ToString( _xlDate, DefaultFormatStr );
 		}
-		
+
 		/// <summary>
 		/// Format this XL Date value using the specified format string.  The format
 		/// string is specified according to the <see cref="DateTime"/> class.
@@ -1700,10 +1700,10 @@ namespace ZeeGraph
 			string[] longDoW = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
 								"Friday", "Saturday" };
 			string[] shortDoW = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-						
+
 			int year, month, day, hour, minute, second;
 			XLDateToCalendarDate( xlDate, out year, out month, out day, out hour, out minute, out second );
-			
+
 			string resultStr = fmtStr.Replace( "&mmmm", longMonth[ month - 1 ] );
 			resultStr = resultStr.Replace( "&mmm", shortMonth[ month - 1 ] );
 			resultStr = resultStr.Replace( "&mm", month.ToString( "d2" ) );
@@ -1721,11 +1721,11 @@ namespace ZeeGraph
 			resultStr = resultStr.Replace( "&a", (hour>=12) ? "pm" : "am" );
 			resultStr = resultStr.Replace( "&wwww", longDoW[ XLDateToDayOfWeek( xlDate ) ] );
 			resultStr = resultStr.Replace( "&www", shortDoW[ XLDateToDayOfWeek( xlDate ) ] );
-			
-			
+
+
 			return resultStr;
 		}
-*/		
+*/
 
 	#endregion
 	}

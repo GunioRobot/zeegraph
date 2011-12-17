@@ -37,7 +37,7 @@ namespace ZeeGraph.WinForms
 
 		// Revision: JCarpenter 10/06
 		/// <summary>
-		/// Public enumeration that specifies the type of 
+		/// Public enumeration that specifies the type of
 		/// object present at the Context Menu's mouse location
 		/// </summary>
 		public enum ContextMenuObjectState
@@ -266,7 +266,7 @@ namespace ZeeGraph.WinForms
 			Clipboard.SetDataObject( ImageRender(), true );
 		}
 
-		// 
+		//
 		/// <summary>
 		/// Setup for creation of a new image, applying appropriate anti-alias properties and
 		/// returning the resultant image file
@@ -353,7 +353,7 @@ namespace ZeeGraph.WinForms
 		}
 
 		/// <summary>
-		/// Copies the current image to the selected file in  
+		/// Copies the current image to the selected file in
 		/// Emf (vector), or a variety of Bitmap formats.
 		/// </summary>
 		/// <param name="DefaultFileName">
@@ -518,11 +518,11 @@ namespace ZeeGraph.WinForms
 				using (Graphics gMeta = Graphics.FromImage(metaFile))
 				{
 					//PaneBase.SetAntiAliasMode( gMeta, IsAntiAlias );
-					//gMeta.CompositingMode = CompositingMode.SourceCopy; 
+					//gMeta.CompositingMode = CompositingMode.SourceCopy;
 					//gMeta.CompositingQuality = CompositingQuality.HighQuality;
 					//gMeta.InterpolationMode = InterpolationMode.HighQualityBicubic;
 					//gMeta.SmoothingMode = SmoothingMode.AntiAlias;
-					//gMeta.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality; 
+					//gMeta.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
 					this._masterPane.Draw(gMeta);
 					//gMeta.Dispose();
 				}
@@ -554,7 +554,7 @@ namespace ZeeGraph.WinForms
 			{
 				bool bResult = false;
 				IntPtr hEMF;
-				hEMF = mf.GetHenhmetafile(); // invalidates mf 
+				hEMF = mf.GetHenhmetafile(); // invalidates mf
 				if (!hEMF.Equals(new IntPtr(0)))
 				{
 					StringBuilder tempName = new StringBuilder(fileName);
@@ -568,7 +568,7 @@ namespace ZeeGraph.WinForms
 			{
 				bool bResult = false;
 				IntPtr hEMF;
-				hEMF = mf.GetHenhmetafile(); // invalidates mf 
+				hEMF = mf.GetHenhmetafile(); // invalidates mf
 				if (!hEMF.Equals(new IntPtr(0)))
 				{
 					SaveFileDialog sfd = new SaveFileDialog();
@@ -584,12 +584,12 @@ namespace ZeeGraph.WinForms
 				return bResult;
 			}
 
-			// Metafile mf is set to a state that is not valid inside this function. 
+			// Metafile mf is set to a state that is not valid inside this function.
 			static internal bool PutEnhMetafileOnClipboard(IntPtr hWnd, Metafile mf)
 			{
 				bool bResult = false;
 				IntPtr hEMF, hEMF2;
-				hEMF = mf.GetHenhmetafile(); // invalidates mf 
+				hEMF = mf.GetHenhmetafile(); // invalidates mf
 				if (!hEMF.Equals(new IntPtr(0)))
 				{
 					hEMF2 = CopyEnhMetaFile(hEMF, null);

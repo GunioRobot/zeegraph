@@ -30,7 +30,7 @@ namespace ZeeGraph
    /// A class representing all the characteristics of the bar
    /// segments that make up a curve on the graph.
    /// </summary>
-   /// 
+   ///
    /// <author> John Champion </author>
    /// <version> $Revision: 3.30 $ $Date: 2007/11/03 04:41:28 $ </version>
    [Serializable]
@@ -102,7 +102,7 @@ namespace ZeeGraph
 		}
 
 		/// <summary>
-		/// Default constructor that sets the 
+		/// Default constructor that sets the
 		/// <see cref="Color"/> as specified, and the remaining
 		/// <see cref="Bar"/> properties to default
 		/// values as defined in the <see cref="Default"/> class.
@@ -239,7 +239,7 @@ namespace ZeeGraph
 		/// represents a linear multiple to be applied to font sizes, symbol sizes, etc.
 		/// </param>
 		/// <param name="fullFrame">true to draw the bottom portion of the border around the
-		/// bar (this is for legend entries)</param> 
+		/// bar (this is for legend entries)</param>
 		/// <param name="dataValue">The data value to be used for a value-based
 		/// color gradient.  This is only applicable for <see cref="FillType.GradientByX"/>,
 		/// <see cref="FillType.GradientByY"/> or <see cref="FillType.GradientByZ"/>.</param>
@@ -286,7 +286,7 @@ namespace ZeeGraph
 			// Make a rectangle for the bar and draw it
 			RectangleF rect = new RectangleF( left, top, right - left, bottom - top );
 
-			Draw( g, pane, rect, scaleFactor, fullFrame, isSelected, dataValue );      
+			Draw( g, pane, rect, scaleFactor, fullFrame, isSelected, dataValue );
 		}
 
 		/// <summary>
@@ -308,7 +308,7 @@ namespace ZeeGraph
 		/// represents a linear multiple to be applied to font sizes, symbol sizes, etc.
 		/// </param>
 		/// <param name="fullFrame">true to draw the bottom portion of the border around the
-		/// bar (this is for legend entries)</param> 
+		/// bar (this is for legend entries)</param>
 		/// <param name="dataValue">The data value to be used for a value-based
 		/// color gradient.  This is only applicable for <see cref="FillType.GradientByX"/>,
 		/// <see cref="FillType.GradientByY"/> or <see cref="FillType.GradientByZ"/>.</param>
@@ -374,7 +374,7 @@ namespace ZeeGraph
 					barType == BarType.SortedOverlay )
 				pos = 0;
 
-			// Loop over each defined point and draw the corresponding bar                
+			// Loop over each defined point and draw the corresponding bar
 			for ( int i=0; i<curve.Points.Count; i++ )
 				DrawSingleBar( g, pane, curve, i, pos, baseAxis, valueAxis, barWidth, scaleFactor );
 		}

@@ -31,7 +31,7 @@ namespace ZeeGraph
 	/// <seealso cref="BasicArrayPointList" />
 	/// <seealso cref="IPointList" />
 	/// <seealso cref="IPointListEdit" />
-	/// 
+	///
 	/// <author>Jerry Vos and John Champion</author>
 	/// <version> $Revision: 3.5 $ $Date: 2007/04/16 00:03:02 $ </version>
 	[Serializable]

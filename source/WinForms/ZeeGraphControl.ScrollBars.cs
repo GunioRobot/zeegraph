@@ -235,7 +235,7 @@ namespace ZeeGraph.WinForms
 
 		/// <summary>
 		/// Sets the value of the scroll range properties (see <see cref="ScrollMinX" />,
-		/// <see cref="ScrollMaxX" />, <see cref="YScrollRangeList" />, and 
+		/// <see cref="ScrollMaxX" />, <see cref="YScrollRangeList" />, and
 		/// <see cref="Y2ScrollRangeList" /> based on the actual range of the data for
 		/// each corresponding <see cref="Axis" />.
 		/// </summary>
